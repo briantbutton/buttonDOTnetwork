@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B4SW6XJ0KX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B4SW6XJ0KX');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="style/images/favicon.ico">
+<title>ButtonNet</title>
+<!-- Bootstrap core CSS -->
+<link href="style/css/fonts.css" rel="stylesheet">
+<link href="style/css/bootstrap.css" rel="stylesheet">
+<link href="style/css/settings.css" rel="stylesheet">
+<link href="style/js/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" media="all" />
+<link href="style/js/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.2" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet">
+<link href="style/css/color/aqua.css" rel="stylesheet">
+<link href="style/type/budicons.css" rel="stylesheet">
+<link href="style/css/buttonnet.css" rel="stylesheet">
+</head>
+<body class="buttonnet buttonnet-beta no-page-title"">
+
+  <div class="body-wrapper">
+    <a name="thetop"></a>
+    <div class="navbar">
+      <div class="navbar-header">
+        <div class="container">
+          <div class="basic-wrapper">
+            <a class="btn responsive-menu pull-right" data-toggle="collapse" data-target=".navbar-collapse">
+              <i class='icon-menu-1'></i>
+            </a>
+            <a class="navbar-brand" href="./index.html">
+              <img src="style/images/buttonflat-short-lite-wider-gap.png" alt="" />  
+            </a>
+          </div>
+          <nav class="collapse navbar-collapse pull-right">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="./index.html">Home</a>
+              </li>
+			  <li>
+                <a href="./index.html#video">Videos</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Why ButtonNet -->
+    <div class="dark-wrapper">
+      <div class="container inner">
+        <div class="no-sidebar video">
+          <div class="blog-posts classic-blog">
+            <div class="post bordered format-image">
+              <h1 class="post-title text-center">Easy Share</h1>
+			  <p>Operated on a phone</p>
+			  
+              <video id="subtitles" controls class="inplace" style="display:none;" poster="./video/share2-iphone.jpg">
+                <source src="./video/share2.mp4" type="video/mp4">
+              </video>
+              <video id="no-subtitles" controls class="inplace" style="display:block;" poster="./video/share2-iphone.jpg">
+                <source src="./video/share2.mp4" type="video/mp4">
+
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	
+    <a name="footer"></a>
+    <footer class="footer black-wrapper widget-footer">
+
+      <div class="sub-footer">
+        <div class="container">
+          <p class="pull-left">© 2021 Button Systems. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
+  <!-- /.body-wrapper --> 
+
+  <div id="video-player1" class="video-player-div">
+  </div>
+  <div id="video-player2" class="video-player-div">
+  </div>
+
+<script src="style/js/jquery.js"></script> 
+<script src="style/js/bootstrap.min.js"></script> 
+<script src="style/js/twitter-bootstrap-hover-dropdown.min.js"></script> 
+<script src="style/js/jquery.themepunch.plugins.min.js"></script> 
+<script src="style/js/jquery.themepunch.revolution.min.js"></script> 
+<script src="style/js/jquery.fancybox.pack.js"></script> 
+<script src="style/js/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.2"></script> 
+<script src="style/js/fancybox/helpers/jquery.fancybox-media.js?v=1.0.0"></script> 
+<script src="style/js/jquery.isotope.min.js"></script> 
+<script src="style/js/idangerous.swiper-2.1.min.js"></script> 
+<script src="style/js/jquery.fitvids.js"></script> 
+<script src="style/js/jquery.sticky.js"></script> 
+<script src="style/js/jquery.slickforms.js"></script> 
+<script src="style/js/instafeed.min.js"></script> 
+<script src="style/js/jquery.dcflickr.1.0.js"></script> 
+<script src="style/js/videoplayer.js"></script>
+<script src="style/js/classie.js"></script> 
+<script src="style/js/scripts.js"></script>
+<script type="text/javascript">
+  (function (){
+    const player1         = new VideoPlayer(),
+          player2         = new VideoPlayer(),
+          nonjpvideo      = document.getElementById("no-subtitles"),
+          jpvideo         = document.getElementById("subtitles");
+    player1.setFileName("upload3");
+    player1.setPlayerDivId("video-player1");
+    player1.setReferenceId("video-thumbnail1");
+    player1.activate();
+    window.player1        = player1
+    player2.setFileName("share2");
+    player2.setPlayerDivId("video-player2");
+    player2.setReferenceId("video-thumbnail2");
+    player2.activate();
+    if(navigator.language.indexOf("ja")===0){
+      nonjpvideo.style.display = "none";
+      jpvideo.style.display    = "block";
+      jpvideo.setAttribute("preload","auto")
+    }else{
+      jpvideo.style.display    = "none";
+      nonjpvideo.style.display = "block";
+      nonjpvideo.setAttribute("preload","auto")
+    }
+  })()
+</script>
+</body>
+</html>
