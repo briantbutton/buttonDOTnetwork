@@ -1,0 +1,214 @@
+/* ***************************************************** 
+     BUTTONNET.CSS    BUTTONNET.CSS    BUTTONNET.CSS   
+   *****************************************************    */
+
+/* *************************** 
+  CHAPTERS
+  ---------------------------
+  $A0 - Text style formats
+  $A1 - 
+  $A2 - 
+  $A3 - Video player
+  $A4 - style.css overrides
+  $A5 - style.css amendments
+  $A6 - 
+  $A7 -  
+  $A8 - 
+  $A9 - 
+   ************************** */
+
+
+/* ***************************
+      $A0 Text Style Start      $A0 Text Style Start      */
+.buttonnet .body-wrapper .page-title h1 {
+  font-family:   'ProximaSoft-Semibold';
+  font-weight:                      300;
+  font-size:                       48px;
+  letter-spacing:                   2px;
+}
+.buttonnet .body-wrapper h1.post-title {
+  font-family:     'ProximaSoft-Medium';
+  font-size:                       28px;
+  letter-spacing:                   1px;
+}
+.buttonnet .body-wrapper .section-title h3 {
+  font-family:     'ProximaSoft-Medium';
+  letter-spacing:                   1px;
+}
+.buttonnet .body-wrapper h3.section-title {
+  font-family:     'ProximaSoft-Medium';
+  letter-spacing:                   1px;
+}
+
+.buttonnet .body-wrapper h4 {
+  font-size:                       17px;
+  font-family:     'ProximaSoft-Medium';
+}
+.buttonnet .body-wrapper .section-title h4 {
+  font-size:                       22px;
+  letter-spacing:                   1px;
+}
+.buttonnet .body-wrapper p.prose-text {
+  font-size:                       17px;
+  font-family:    'ProximaSoft-Regular';
+}
+.buttonnet .body-wrapper li.prose-text {
+  font-size:                       17px;
+  font-family:    'ProximaSoft-Regular';
+}
+/*    $A0 Text Style end       $A0 Text Style end
+   ***************************                            */
+
+
+
+/* ***************************
+     $A3 Video Player Start    $A3 Video Player Start     */
+.buttonnet div.video-player-div {
+  position:                       fixed;
+  display:                         none;
+  z-index:                        10000;
+  transition-property:         top,left;
+  transition-duration:       0.5s, 0.5s;
+  transition-timing-function:    linear;
+}
+.buttonnet video.video-player {
+  display:                         none;
+}
+.buttonnet img.video-thumbnail {
+  display:                        block;
+  transition-property:     height,width;
+  transition-duration:       0.5s, 0.5s;
+  transition-timing-function:    linear;
+}
+/*    $A3 Video Player end       $A0 Video Player end
+   ***************************                            */
+
+
+/* ***************************
+      $A0 Text Style Start      $A0 Text Style Start      */
+
+/* ***************************
+   $A4 Style Overrides Start   $A4 Style Overrides Start  */
+.buttonnet .body-wrapper .navbar.fixed .navbar-brand {
+  padding-top:                     16px;
+}
+.buttonnet .body-wrapper .navbar .navbar-brand img {
+  height:                          36px;
+  width:                           auto;
+}
+.buttonnet .body-wrapper .navbar.fixed .navbar-brand img {
+  height:                          24px;
+}
+.buttonnet .body-wrapper .navbar .navbar-nav > li > a {
+    font-family:   "ProximaSoft-Medium";
+    font-size:                     15px;
+    text-transform:           uppercase;
+    color:                      #F0F4F8;
+    padding:        32px 10px 32px 10px;
+    letter-spacing:                 1px;
+}
+.buttonnet .body-wrapper .navbar.fixed .navbar-nav > li > a {
+    padding:        16px 10px 16px 10px;
+}
+.buttonnet .body-wrapper .bp0 {                                   /* line 843 */
+    padding-bottom:                 0px;
+}
+.buttonnet .body-wrapper .bp10 {
+    padding-bottom:                10px;
+}
+.buttonnet .body-wrapper .bp20 {
+    padding-bottom:                20px;
+}
+.buttonnet .body-wrapper .bm0 {
+    margin-bottom:                  0px;
+}
+.buttonnet .body-wrapper .bm5 {
+    margin-bottom:                  5px;
+}
+.buttonnet .body-wrapper .bm6 {
+    margin-bottom:                  6px;
+}
+.buttonnet .body-wrapper .bm10 {
+    margin-bottom:                 10px;
+}
+.buttonnet .body-wrapper .bm15 {
+    margin-bottom:                 15px;
+}
+.buttonnet .body-wrapper .bm20 {
+    margin-bottom:                 20px;
+}
+.buttonnet .body-wrapper .bm30 {
+    margin-bottom:                 30px;
+}
+.buttonnet .body-wrapper .bm50 {
+    margin-bottom:                 50px;
+}
+.buttonnet .body-wrapper .bp50 {
+    padding-bottom:                50px;
+}
+/*   $A4 Style Overrides end    $A4 Style Overrides end
+   ***************************                            */
+
+/* ***************************
+   $A5 Style Overrides Start   $A5 Style Overrides Start  */
+
+
+/* Right now, our max width seems to be width-limited by Bootstrap declarations */ 
+
+
+@media (min-width: 1601px) {
+  .buttonnet .body-wrapper .no-sidebar.video {
+    width:                       1352px;
+  }
+  .buttonnet .body-wrapper .no-sidebar.video video.inplace {
+    width:                       1280px;
+    height:                       720px;
+  }
+}
+@media (min-width: 1401px) and (max-width: 1600px) { 
+  .buttonnet .body-wrapper .no-sidebar.video {
+    width:                       1192px;
+  }
+  .buttonnet .body-wrapper .no-sidebar.video video.inplace {
+    width:                       1120px;
+    height:                       630px;
+  }
+}
+@media (min-width: 1241px) and (max-width: 1400px) { 
+  .buttonnet .body-wrapper .no-sidebar.video {
+    width:                       1192px;
+  }
+  .buttonnet .body-wrapper .no-sidebar.video video.inplace {
+    width:                       1120px;
+    height:                       630px;
+  }
+}
+@media (min-width: 1121px) and (max-width: 1240px) { 
+  .buttonnet .body-wrapper .no-sidebar.video {
+    width:                       1032px;
+  }
+  .buttonnet .body-wrapper .no-sidebar.video video.inplace {
+    width:                        960px;
+    height:                       540px;
+  }
+}
+@media (min-width: 921px) and (max-width: 1120px) { 
+  .buttonnet .body-wrapper .no-sidebar.video {
+    width:                        872px;
+  }
+  .buttonnet .body-wrapper .no-sidebar.video video.inplace {
+    width:                        800px;
+    height:                       450px;
+  }
+}
+@media (max-width: 920px) { 
+  .buttonnet .body-wrapper .no-sidebar.video {
+    width:                        712px;
+  }
+  .buttonnet .body-wrapper .no-sidebar.video video.inplace {
+    width:                        640px;
+    height:                       360px;
+  }
+}
+/*   $A5 Style Overrides end    $A5 Style Overrides end
+   ***************************                            */
