@@ -1657,6 +1657,9 @@ textarea {
 .blog-posts.classic-blog figure.full {
     margin: 0 -35px 30px
 }
+.blog-posts.classic-blog div.full {
+    margin: 0 -35px 30px
+}
 .blog-posts .post {
     margin-bottom: 30px
 }
