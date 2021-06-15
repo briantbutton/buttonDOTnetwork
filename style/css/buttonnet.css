@@ -28,8 +28,9 @@
 }
 .buttonnet .body-wrapper h1.post-title {
   font-family:     'ProximaSoft-Medium';
-  font-size:                       28px;
-  letter-spacing:                   1px;
+  font-size:                       30px;
+  letter-spacing:                   2px;
+  margin-bottom:                   30px;
 }
 .buttonnet .body-wrapper .section-title h3 {
   font-family:     'ProximaSoft-Medium';
@@ -145,6 +146,25 @@
 }
 .buttonnet .body-wrapper .bp50 {
     padding-bottom:                50px;
+}
+.buttonnet .light-wrapper div.container.inner,
+.buttonnet .dark-wrapper div.container.inner {
+    padding-top:                   50px;
+    padding-bottom:                50px;
+}
+.buttonnet .section-title h3 {
+    font-size:                     26px;
+    text-transform:                none;
+}
+.buttonnet .section-title.text-center h3:before,
+.buttonnet .section-title h3:after {
+    display: inline-block;
+    content: "";
+    border-top: 2px solid #D0D0D0;
+    border-bottom: 2px solid #D0D0D0;
+    height: 8px;
+    position: absolute;
+    width: 80px;
 }
 /*   $A4 Style Overrides end    $A4 Style Overrides end
    ***************************                            */
