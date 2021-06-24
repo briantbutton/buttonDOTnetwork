@@ -750,7 +750,7 @@ pre code {
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .container_ {
     width: 1170px;
   }
 }

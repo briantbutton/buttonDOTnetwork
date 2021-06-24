@@ -7,7 +7,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-B4SW6XJ0KX');
 </script>
 <meta charset="utf-8">
@@ -74,7 +73,6 @@
   <div class="fullscreenbanner-container revolution">
     <div class="fullscreenbanner">
       <ul>
-
         <li data-transition="fade"> <img src="style/images/slides/share-slide.jpg" alt="" />
           <div class="caption condensed customin customout" data-x="center" data-y="200" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
 						data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
@@ -83,7 +81,7 @@
 						data-easing="Back.easeOut"
 						data-endspeed="300"
 						data-endeasing="Power1.easeIn"
-						style="font-family:ProximaSoft-Medium;">Share Photos & Videos</div>
+						style="font-family:ProximaSoft-Medium;">Share Photos &amp; Videos</div>
           <div class="caption slab customin customout" data-x="center" data-y="264" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
 						data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
 						data-speed="600"
@@ -119,14 +117,25 @@
 
   <div class="dark-wrapper">
     <div class="container inner">
-      <div class="divide50"></div>
+      <div class="divide30"></div>
       <div class="section-title text-center">
         <h3>How Does It Work?</h3>
       </div>    
       <div class="row">
-        <div class="col-sm-4">
-          <!-- <img src="style/images/localserver-noantenna.jpg" alt="" style="width:314px;height:232px;margin:12px;" /> --> 
-          <!-- <figure><img src="style/images/howitworks/many-phones.jpg" alt="" /></figure> --> 
+        <div class="col-sm-8" id="bn-intro-video-column">
+          <div class="full" style="width: 576px; height: 324px;" id="bn-intro-video-div">
+            <video controls
+                   preload="auto"
+                   id="bn-intro-video"
+                   poster="video/intro-720-title.jpg"
+                   src="video/intro-432.mp4"
+                   width="768"
+                   height="432"
+                   style="width:576px;height:324px;"
+                  >No video</video>
+          </div>
+        </div>
+        <div class="col-sm-4" id="bn-intro-video-opposite">
           <br />
           <h4 class="lead" style="font-family:ProximaSoft-Medium;">
             ButtonNet puts a web server <u>right in the building</u> with you.&nbsp;
@@ -139,25 +148,6 @@
           <h4 class="lead" style="font-family:ProximaSoft-Medium;">
             Local speed is just about instantaneous -- you need to see it to believe it.
           </h4>
-        </div>
-        <div class="col-sm-8">
-          <br />
-          <!--
-          <div class="full" style="width: 576px; height: 324px;">
-            <img src="style/images/localserver-noantenna.jpg" alt="" style="width:314px;height:232px;margin:24px;" />
-          </div>
-          -->
-          <div class="full" style="width: 576px; height: 324px;">
-            <video controls
-                   preload="auto"
-                   id="bn-intro-video"
-                   poster="video/intro-720-title.jpg"
-                   src="video/intro-432.mp4"
-                   width="768"
-                   height="432"
-                   style="width:576px;height:324px;"
-                  >No video</video>
-          </div>
         </div>
       </div>
     </div>
@@ -173,27 +163,21 @@
         <h3>Photo &amp; Video Sharing</h3>
       </div>	  
       <div class="row">
-        <div class="col-sm-4">
-          <figure><img src="style/images/slides/share.jpg" alt="" /></figure>
+        <div class="col-sm-4" id="bn-usage-video-opposite">
+          <figure><img src="style/images/slides/share.jpg" alt="" id="usage-opposite-image"/></figure>
           <h4 class="lead" style="font-family:ProximaSoft-Medium;">ButtonNet helps people to share photos and videos among each other, fast and easy.</h4>
           <h4 class="lead" style="font-family:ProximaSoft-Medium;">Using its own Wifi networks, ButtonNet works even without good Internet or strong signal.</h4>
         </div>
-        <div class="col-sm-8">
-          <br />
-          <!--
-          <div class="full" style="width: 576px; height: 324px;">
-            <img src="style/images/localserver-noantenna.jpg" alt="" style="width:314px;height:232px;margin:24px;" />
-          </div>
-          -->
-          <div class="full" style="width: 576px; height: 324px;">
+        <div class="col-sm-8" id="bn-usage-video-column">
+          <div class="full" style="width: 576px; height: 324px;" id="bn-usage-video-div">
             <video controls
                    preload="auto"
-                   id="bn-intro-video"
+                   id="bn-usage-video"
                    poster="video/usage-720-title.jpg"
                    src="video/usage-432.mp4"
                    width="768"
                    height="432"
-                   style="width:576px;height:324px;"
+                   style="width:576px;height:324px;float:right;"
                   >No video</video>
           </div>
         </div>
@@ -484,7 +468,7 @@
         <h3>Pilot Program</h3>
       </div>
       <div id="testimonials" class="tab-container">
-        <div class="panel-container >
+        <div class="panel-container">
             <div class="row">
               <div class="col-lg-1"></div> 
               <div class="col-lg-5"> 
@@ -630,5 +614,80 @@
 <script src="style/js/retina.js"></script> 
 <script src="style/js/classie.js"></script> 
 <script src="style/js/scripts.js"></script>
+<script type="text/javascript">
+    (function (){
+      var introVideo          = document.getElementById("bn-intro-video"),
+          introVideoDiv       = document.getElementById("bn-intro-video-div"),
+          introContainer      = document.getElementById("bn-intro-video-column"),
+          introOpposite       = document.getElementById("bn-intro-video-opposite"),
+          introInitWidth      = 576,
+          introInitHeight     = 324,
+          introPlayWidth      = 768,
+          introPlayHeight     = 432,
+          usageVideo          = document.getElementById("bn-usage-video"),
+          usageVideoDiv       = document.getElementById("bn-usage-video-div"),
+          usageContainer      = document.getElementById("bn-usage-video-column"),
+          usageOpposite       = document.getElementById("bn-usage-video-opposite"),
+          usageInitWidth      = 576,
+          usageInitHeight     = 324,
+          usagePlayWidth      = 768,
+          usagePlayHeight     = 432;
+
+      if(introVideo&&introVideoDiv&&introContainer&&introOpposite){
+        introVideo.addEventListener("play", expandIntroVideo);
+        introVideo.addEventListener("pause",contractIntroVideo);
+        introVideo.addEventListener("ended",contractIntroVideo)
+      }
+      if(usageVideo&&usageVideoDiv&&usageContainer&&usageOpposite){
+        usageVideo.addEventListener("play", expandUsageVideo);
+        usageVideo.addEventListener("pause",contractUsageVideo);
+        usageVideo.addEventListener("ended",contractUsageVideo)
+      }
+      function expandIntroVideo(){
+        introOpposite.style.opacity         = "0.25";
+        introOpposite.className             = "col-sm-2 contracted";
+        introContainer.className            = "col-sm-10";
+        introVideo.style.width              = ""+introPlayWidth+"px";
+        introVideo.style.height             = ""+introPlayHeight+"px";
+        introVideoDiv.style.width           = ""+introPlayWidth+"px";
+        introVideoDiv.style.height          = ""+introPlayHeight+"px"
+      }
+      function contractIntroVideo(){
+        introVideo.style.width              = ""+introInitWidth+"px";
+        introVideo.style.height             = ""+introInitHeight+"px";
+        setTimeout(contractIntroVideoB,650)
+      }
+      function contractIntroVideoB(){
+        usageVideoDiv.style.width           = ""+introInitWidth+"px";
+        usageVideoDiv.style.height          = ""+introInitHeight+"px"
+        introOpposite.style.opacity         = "0.75";
+        introOpposite.style.fontSize        = "17px";
+        introOpposite.className             = "col-sm-4";
+        introContainer.className            = "col-sm-8"
+      }
+      function expandUsageVideo(){
+        usageOpposite.style.opacity         = "0.25";
+        usageOpposite.className             = "col-sm-2 contracted";
+        usageContainer.className            = "col-sm-10";
+        usageVideo.style.width              = ""+usagePlayWidth+"px";
+        usageVideo.style.height             = ""+usagePlayHeight+"px";
+        usageVideoDiv.style.width           = ""+usagePlayWidth+"px";
+        usageVideoDiv.style.height          = ""+usagePlayHeight+"px"
+      }
+      function contractUsageVideo(){
+        usageVideo.style.width              = ""+usageInitWidth+"px";
+        usageVideo.style.height             = ""+usageInitHeight+"px";
+        setTimeout(contractUsageVideoB,650)
+      }
+      function contractUsageVideoB(){
+        usageVideoDiv.style.width           = ""+usageInitWidth+"px";
+        usageVideoDiv.style.height          = ""+usageInitHeight+"px"
+        usageOpposite.style.opacity         = "0.75";
+        usageOpposite.style.fontSize        = "17px";
+        usageOpposite.className             = "col-sm-4";
+        usageContainer.className            = "col-sm-8"
+      }
+    })();
+</script>
 </body>
 </html>

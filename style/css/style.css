@@ -2639,7 +2639,7 @@ figure .fli-link {
 .tp-bannertimer {
     width: 100%;
     height: 10px;
-    background: url(style/images/timer.png);
+    background: url(../images/timer.png);
     position: absolute;
     z-index: 200;
 }
@@ -2864,14 +2864,14 @@ figure .fli-link {
     background-attachment: scroll !important
 }
 .parallax.testimonials {
-    background-image: url(style/images/pilot-background-navy-dolphins.jpg)
+    background-image: url(../images/pilot-background-navy-dolphins.jpg)
 }
 .parallax.canontestimonials {
-    background-image: url(style/images/canon7d.jpg)
+    background-image: url(../images/canon7d.jpg)
 }
 .page-title {
     height: 300px;
-    background: url(style/images/page-title-1.jpg) no-repeat center center;
+    background: url(../images/page-title-1.jpg) no-repeat center center;
     -webkit-background-size: cover;
     background-size: cover;
     position: relative;
