@@ -5,14 +5,11 @@
 r.js
 .npmignore
 *.max.js
-*.min.js
 *.max.css
-*.min.css
 *.mingz.js
 *compiled.css
 *.xml
 *kiys.js
-*.png
 *-right.js
 *-wrong.js
 lubuntu-16.04.1-alternate-amd64.iso
