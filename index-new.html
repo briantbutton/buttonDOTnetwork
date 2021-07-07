@@ -221,7 +221,12 @@ Local speed is just about instantaneous -- you need to see it to believe it.</p>
 							</div>
 							
 							<!-- Diagram ============================================= -->
-								<div class="topmargin center" ><img src="one-page/images/intro-under-roof-all-media-noline.jpg"  style="max-width: 500px;"></div>
+							<div class="topmargin center">
+                <video muted preload="auto" id="colored-lights" poster="video/colored-lights.jpg" width="768" height="432">
+							    <source src='video/colored-lights.mp4' type='video/mp4' />
+							  </video>
+							</div>
+								<!-- <div class="topmargin center" ><img src="one-page/images/intro-under-roof-all-media-noline.jpg"  style="max-width: 500px;"></div> -->
 							<!-- #Diagram end -->
 						</div>
 					</div>
@@ -419,6 +424,89 @@ Local speed is just about instantaneous -- you need to see it to believe it.</p>
 	<!-- Footer Scripts
 	============================================= -->
 	<script src="js/functions.js"></script>
+
+  <script type="text/javascript">
+    var InView              = (function InView(){
+	    return InView;
+    	function InView(idStr,act,lpse){
+    		var target          = document.getElementById(idStr),
+    		    action          = act!=="play"?"play":act,
+    		    lapse           = typeof lpse === "number" ? lpse : 60000,
+    		    lastPlayed      = (new Date()).getTime()-lapse-1,
+    		    isOffScreen     = true;
+    		if(target){$(window).scroll(check)}
+
+      	function check(){
+      		var now             = (new Date()).getTime();
+      		if(objInView(target)){
+            if(isOffScreen){
+            	isOffScreen     = false;
+            	if(now-lastPlayed>lapse){
+                lastPlayed    = now;
+            		target[action]()
+            	}
+            }
+      		}else{
+      			isOffScreen       = true
+      		}
+      	}
+    	};
+    	function objInView(obj){
+    		var coord           = getCoord(obj),
+    		    middle          = coord.middle;
+    		return middle>100&&middle<window.innerHeight-100
+    	}
+    })();
+    videoPlayer0             = new InView("colored-lights");
+    videoPlayer2             = new InView("burglary-compare1");
+    videoPlayer3             = new InView("burglary-compare2");
+    // buttonOn                 = true;
+    // setTimeout(armButton,1000);
+
+    // function armButton(){
+    // 	var button             = document.getElementById("listing-button");
+    // 	if(button){
+    //    button.addEventListener("click",showTargetPanel)
+    //   }
+    // };
+    // function showTargetPanel(e){
+    // 	var button             = document.getElementById("listing-button"),
+    // 	    table              = document.getElementById("target-table"),
+    // 	    lookUpArrow        = document.getElementById("look-up-arrow");
+    // 	button.setAttribute("class","");
+    // 	table.style.display    = "block";
+    // 	if(lookUpArrow){
+    // 		setTimeout((function(lUA){return function(){lUA.style.color="#C03030"}})(lookUpArrow),2000);
+    // 		setTimeout((function(lUA){return function(){lUA.style.color="#666666"}})(lookUpArrow),3000);
+    // 		setTimeout((function(lUA){return function(){lUA.style.color="#C03030"}})(lookUpArrow),4000);
+    // 		setTimeout((function(lUA){return function(){lUA.style.color="#666666"}})(lookUpArrow),5000);
+    // 		setTimeout((function(lUA){return function(){lUA.style.color="#C03030"}})(lookUpArrow),6000);
+    // 		setTimeout((function(lUA){return function(){lUA.style.color="#666666"}})(lookUpArrow),7000);
+    // 		setTimeout((function(lUA){return function(){lUA.style.color="#C03030"}})(lookUpArrow),8000);
+    // 		setTimeout((function(lUA){return function(){lUA.style.color="#666666"}})(lookUpArrow),9000);
+    // 	}
+    // };
+
+    /* **************************                GETCOORD           ******************************* */
+    /* getCoor returns the x and y coordinates of an HTML object.                                   */
+    function getCoord(HTMLobj,noWinOffset_){
+      var k=[["y","top","Y"],["x","left","X"],["top","top","Y"],["left","left","X"],["bottom","bottom","Y"],["right","right","X"],["height","height"],["width","width"]],
+          noWinOffset=true,r,v=null;
+      if(Boolean(HTMLobj)&&Boolean(r=HTMLobj.getBoundingClientRect())){
+        v={};
+        k.forEach(function(d){
+          var o = Boolean(d[2])&&!noWinOffset?window["page"+d[2]+"Offset"]:0;
+          if ( typeof r[d[0]] === "number" ) {
+            v[d[1]]=Math.floor(r[d[0]]+o+0.5)
+          }
+        });
+        v.center=Math.floor(0.5+(v.left+v.right)/2);
+        v.middle=Math.floor(0.5+(v.top+v.bottom)/2);
+      }
+      return v;
+    }
+
+  </script>
 
 </body>
 </html>
