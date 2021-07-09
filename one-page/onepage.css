@@ -121,7 +121,7 @@ body.side-panel-left.side-push-panel.side-panel-open.stretched #header .containe
 	Page Section
 ---------------------------------------------------------------------------- */
 
-.page-section { padding: 120px 0; }
+.page-section { padding: 40px 0; }
 
 
 /* ----------------------------------------------------------------------------
@@ -169,11 +169,16 @@ body.side-panel-left.side-push-panel.side-panel-open.stretched #header .containe
 
 .op-gradient-icon {
 	background: rgb(131,58,180);
-	background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+	background: linear-gradient(90deg, rgba(18,153,144 ,1) 0%, rgba(111,193,112,1) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-
+/* .op-gradient-icon {
+	background: rgb(131,58,180);
+	background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+} */
 
 /* ----------------------------------------------------------------------------
 	Buttons
