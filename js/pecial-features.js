@@ -52,7 +52,7 @@
                 oppoC2                = document.getElementById(idStrg+"-video"+anotherCol+"-column");
             var containerWidth,initWidth,initHeight,compressedWidth,compressedHeight,playWidth,playHeight;
 
-            if(video&&videoDiv&&container&&oppoC1&&oppoC2&&){
+            if(video&&videoDiv&&container&&oppoC1&&oppoC2){
               video.addEventListener("click",playVideo);
               video.addEventListener("play", expandVideo);
               video.addEventListener("pause",contractVideo);

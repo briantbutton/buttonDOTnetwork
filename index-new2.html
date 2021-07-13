@@ -95,8 +95,9 @@
 						<!-- Logo
 						============================================= -->
 						<div id="logo" class="order-lg-2 col-auto px-0 mr-lg-0">
-							<a href="index-new.html" class="standard-logo" data-dark-logo="one-page/images/buttonflat-short-lite-wider-gap-70h.png"><img src="one-page/images/buttonflat-short-lite-wider-gap-70h.png"  alt="ButtonNet Logo"></a>
-							<a href="index-new.html" class="retina-logo" data-dark-logo="one-page/images/buttonflat-short-lite-wider-gap-70h.png"><img src="one-page/images/buttonflat-short-lite-wider-gap-70h.png" alt="ButtonNet Logo"></a>
+							<a href="index-new.html" class="retina-logo" data-dark-logo="one-page/images/buttonflat-short-lite-wider-gap-70h.png">
+								<img src="one-page/images/buttonflat-short-lite-wider-gap-70h.png" alt="ButtonNet Logo">
+							</a>
 						</div><!-- #logo end -->
 
 						<div id="primary-menu-trigger">
@@ -166,7 +167,7 @@
 				<div class="vertical-middle">
 					<div class="container center" style="font-family: 'Playfair Display';">
 						<h2 id="top-line-text1" style="opacity:0;margin-top:500px;transition-property:margin-top;transition-duration:1.0s;transition-timing-function:linear;background:rgba(16,16,16,0.35);" class="font-weight-bold mb-0">Share Photos and Videos &mdash; Fast</h2>
-						<h2 id="top-line-text2" style="opacity:0;margin-top:300px;transition-property:margin-top;transition-duration:1.0s;transition-timing-function:linear;background:rgba(16,16,16,0.35);" class="font-weight-bold mb-0">No matter where you are</h2>
+						<h2 id="top-line-text2" style="opacity:0;margin-top:150px;transition-property:margin-top;transition-duration:1.0s;transition-timing-function:linear;background:rgba(16,16,16,0.35);" class="font-weight-bold mb-0">No matter where you are</h2>
 						<a href="video/intro-432.mp4" style="opacity:0;" class="play-icon" data-lightbox="iframe"><i class="icon-googleplay"></i></a>
 					</div>
 				</div>
@@ -185,18 +186,25 @@
 						<div class="container clearfix">
 							<div class="mx-auto center" >
 								<h2 class="mb-0 font-weight-light ls1">
-								  "If I want to share content with someone sitting <u>right next to me</u>,
+								  "If I want to share content with someone sitting <i><u>right next to me</u></i>,
 								  <br>
 								  why must I struggle with an Internet link to a remote web server?
 								</h2>
-								<h2 class="mb-0 font-weight-light ls1" style="font-style:italic;">Isn&apos;t there a better way?"</h2>
 							</div>
 							<!-- Diagram ============================================= -->
-							<div class="topmargin center">
+							<div class="center" style="position:relative;margin-top:12px;">
+								<div id="upsell" style="position:absolute;height:240px;width:480px;margin-left:212px;margin-right:212px;padding: 60px 40px 20px 40px;">
+									<div style="width:140px;height:48px;float:left;padding:30px;font-size:20px;">
+										Se me olvidó
+									</div>
+									<div style="width:48px;height:30px;float:left;padding:30px;font-size:20px;">
+										my binder
+									</div>
+								</div>
 								<video muted preload="auto" id="colored-lights" poster="video/colored-lights.jpg" width="70%" >
 							    <source src='video/colored-lights.mp4' type='video/mp4' />
 							  </video>
-								<video style="display:none;" preload="auto" id="two-minute-tale" poster="video/colored-lights.jpg" width="70%" >
+								<video style="display:none;" controls preload="auto" id="two-minute-tale" poster="video/colored-lights.jpg" width="70%" >
 							    <source src='video/intro-432.mp4' type='video/mp4' />
 							  </video>
 							</div>
@@ -209,13 +217,12 @@
 				<div id="section-userexperience" class="page-section pt-0">
 				
 					<div class="mx-auto center container">
-					
 						<h2 class=" mb-0  center text-center text-uppercase font-weight-light ls3 font-body" style="padding-bottom:30px; padding-top:40px;">
-							User Experience</h2>
-					
-							<video poster="style/images/slides/share.jpg" preload="auto" controls style=" width: 70%;"> 
-								<source src='video/usage-432.mp4' type='video/mp4' />
-							</video>
+							User Experience
+						</h2>
+						<video poster="style/images/slides/share.jpg" preload="auto" controls style=" width: 70%;"> 
+							<source src='video/usage-432.mp4' type='video/mp4' />
+						</video>
 					</div>
 				</div>
 				
@@ -483,15 +490,6 @@
 								<p >admin@buttonnet.app</p>
 								<p >(650) 680-5265</p>
 								
-
-<!-- 								<div class="center topmargin-sm">
-									
-									<a href="#" class="social-icon inline-block border-0 si-small si-github" title="Github">
-										<i class="icon-github"></i>
-										<i class="icon-github"></i>
-									</a>
-
-								</div> -->
 							</div>
 
 						</div>
@@ -525,18 +523,42 @@
 	<script src="js/pecial-features.js"></script>
   <script type="text/javascript">
     window.videoPlayer0             = new InView("colored-lights");
+    window.noUpsell                 = false;
     var vid1                        = document.getElementById("colored-lights"),
-        vid2                        = document.getElementById("two-minute-tale");
+        vid2                        = document.getElementById("two-minute-tale"),
+        upcell                      = document.getElementById("upsell");
     vid1.addEventListener("click",switchBait);
+    vid1.addEventListener("play",turnOffUpsell);
+    vid2.addEventListener("play",turnOffUpsellForever);
+    vid1.addEventListener("ended",turnOnUpsell);
     window.videoExpander0           = new Rejigger3Columns("piglets",0);
     window.videoExpander1           = new Rejigger3Columns("piglets",1);
     window.videoExpander1           = new Rejigger3Columns("piglets",2);
-    setTimeout((function(e1){return function(){if(e1){e1.style.opacity="1";e1.style.marginTop="0px"}}})(document.getElementById("top-line-text1")), 4000);
-    setTimeout((function(e2){return function(){if(e2){e2.style.opacity="1";e2.style.marginTop="0px"}}})(document.getElementById("top-line-text2")), 8000);
+    setTimeout((e1=>()=>backToTop(e1))(document.getElementById("top-line-text1")),4000);
+    setTimeout((e1=>()=>backToTop(e1))(document.getElementById("top-line-text2")),8000);
+
     function switchBait(){
     	vid1.style.display            = "none";
     	vid2.style.display            = "inline";
-    	vid2.play()
+    	vid2.play();
+    }
+    function backToTop(e){
+    	if(e){
+    		e.style.opacity             = "1";
+    		e.style.marginTop           = "0px"
+    	}    	
+    }
+    function turnOffUpsellForever(){
+    	upcell.style.display          = "none";
+    	noUpsell                      = true
+    }
+    function turnOffUpsell(){
+    	upcell.style.display          = "none"
+    }
+    function turnOnUpsell(){
+    	if(!noUpsell){
+      	upcell.style.display        = "block"
+      }
     }
   </script>
 
