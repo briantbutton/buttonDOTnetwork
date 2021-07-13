@@ -67,8 +67,6 @@
 		body.device-lg .onepage-outdoor-negetive { margin-top: -300px; }
 
 		@media (min-width: 768px) {
-			#slider h2 { font-size: 52px; }
-
 			.text-overlay-title h3 {
 				font-size: 22px;
 				letter-spacing: 1px;
@@ -166,8 +164,8 @@
 
 				<div class="vertical-middle">
 					<div class="container center" style="font-family: 'Playfair Display';">
-						<h2 id="top-line-text1" style="opacity:0;margin-top:500px;transition-property:margin-top;transition-duration:1.0s;transition-timing-function:linear;background:rgba(16,16,16,0.35);" class="font-weight-bold mb-0">Share Photos and Videos &mdash; Fast</h2>
-						<h2 id="top-line-text2" style="opacity:0;margin-top:150px;transition-property:margin-top;transition-duration:1.0s;transition-timing-function:linear;background:rgba(16,16,16,0.35);" class="font-weight-bold mb-0">No matter where you are</h2>
+						<h2 id="top-line-text1" class="top-line-text" style="margin-top:500px;" class="font-weight-bold mb-0">Share photos and videos &mdash; <i>Fast!</i></h2>
+						<h2 id="top-line-text2" class="top-line-text">No matter where you are</h2>
 						<a href="video/intro-432.mp4" style="opacity:0;" class="play-icon" data-lightbox="iframe"><i class="icon-googleplay"></i></a>
 					</div>
 				</div>
@@ -185,19 +183,20 @@
 					<div class="section m-0">
 						<div class="container clearfix">
 							<div class="mx-auto center" >
-								<h2 class="mb-0 font-weight-light ls1">
-								  "If I want to share content with someone sitting <i><u>right next to me</u></i>,
+								<h2 class="faux-quote-body">
+								  "If I want to share content with someone sitting <u>right next to me</u>,
 								  <br>
-								  why must I struggle with an Internet link to a remote web server?
+								  why must I struggle with an Internet link to a remote web server?"
 								</h2>
+								<h2 class="faux-quote-attribution">&mdash; traveler</h2>
 							</div>
 							<!-- Diagram ============================================= -->
 							<div class="center" style="position:relative;margin-top:12px;">
 								<div id="upsell" style="position:absolute;height:240px;width:480px;margin-left:212px;margin-right:212px;padding: 60px 40px 20px 40px;">
-									<div style="width:140px;height:48px;float:left;padding:30px;font-size:20px;">
+									<div id="upsell1" style="width:140px;height:48px;float:left;padding:30px;font-size:20px;">
 										Se me olvidó
 									</div>
-									<div style="width:48px;height:30px;float:left;padding:30px;font-size:20px;">
+									<div id="upsell2" style="width:48px;height:30px;float:left;padding:30px;font-size:20px;">
 										my binder
 									</div>
 								</div>
@@ -522,44 +521,11 @@
 	<script src="js/functions.js"></script>
 	<script src="js/pecial-features.js"></script>
   <script type="text/javascript">
-    window.videoPlayer0             = new InView("colored-lights");
-    window.noUpsell                 = false;
-    var vid1                        = document.getElementById("colored-lights"),
-        vid2                        = document.getElementById("two-minute-tale"),
-        upcell                      = document.getElementById("upsell");
-    vid1.addEventListener("click",switchBait);
-    vid1.addEventListener("play",turnOffUpsell);
-    vid2.addEventListener("play",turnOffUpsellForever);
-    vid1.addEventListener("ended",turnOnUpsell);
-    window.videoExpander0           = new Rejigger3Columns("piglets",0);
-    window.videoExpander1           = new Rejigger3Columns("piglets",1);
-    window.videoExpander1           = new Rejigger3Columns("piglets",2);
-    setTimeout((e1=>()=>backToTop(e1))(document.getElementById("top-line-text1")),4000);
-    setTimeout((e1=>()=>backToTop(e1))(document.getElementById("top-line-text2")),8000);
-
-    function switchBait(){
-    	vid1.style.display            = "none";
-    	vid2.style.display            = "inline";
-    	vid2.play();
-    }
-    function backToTop(e){
-    	if(e){
-    		e.style.opacity             = "1";
-    		e.style.marginTop           = "0px"
-    	}    	
-    }
-    function turnOffUpsellForever(){
-    	upcell.style.display          = "none";
-    	noUpsell                      = true
-    }
-    function turnOffUpsell(){
-    	upcell.style.display          = "none"
-    }
-    function turnOnUpsell(){
-    	if(!noUpsell){
-      	upcell.style.display        = "block"
-      }
-    }
+    // window.videoPlayer0             = new InView("colored-lights");
+    // window.videoExpander0           = new Rejigger3Columns("piglets",0);
+    // window.videoExpander1           = new Rejigger3Columns("piglets",1);
+    // window.videoExpander1           = new Rejigger3Columns("piglets",2);
+    // window.videobaiter              = new Baiter("colored-lights","two-minute-tale","upsell",["upsell1","upsell2"]);
   </script>
 
 </body>
