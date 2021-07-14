@@ -1,7 +1,8 @@
       (function(){
 
         const k                       = [["y","top","Y"],["x","left","X"],["top","top","Y"],["left","left","X"],["bottom","bottom","Y"],["right","right","X"],["height","height"],["width","width"]];
-        var   vid1                    = document.getElementById("colored-lights"),
+        var   btn1                    = document.getElementById("see-more"),
+              vid1                    = document.getElementById("colored-lights"),
               vid2                    = document.getElementById("two-minute-tale"),
               upcell                  = document.getElementById("upsell"),
               noUpsell                = false;
@@ -158,11 +159,13 @@
         window.videoExpander1         = new Rejigger3Columns("piglets",2);
         // videobaiter                 = new Baiter("colored-lights","two-minute-tale","upsell",["upsell1","upsell2"]);
 
-        if(vid1&&vid2&&upcell){
-          vid1.addEventListener("click",switchBait);
+        if(vid1&&vid2&&upcell&&btn1){
+          // vid1.addEventListener("click",switchBait);
+          btn1.addEventListener("click",switchBait);
           vid1.addEventListener("play",turnOffUpsell);
           vid2.addEventListener("play",turnOffUpsellForever);
           vid1.addEventListener("ended",turnOnUpsell);
+          vid2.addEventListener("ended",revert);
           setTimeout((e1=>()=>backToTop(e1))(document.getElementById("top-line-text1")),4000);
           setTimeout((e2=>()=>backToTop(e2))(document.getElementById("top-line-text2")),8000);
         }
@@ -171,6 +174,12 @@
           vid1.style.display          = "none";
           vid2.style.display          = "inline";
           vid2.play()
+        }
+        function revert(){
+          vid2.style.display          = "none";
+          vid1.style.display          = "inline";
+          noUpsell                    = false
+          turnOnUpsell()
         }
         function backToTop(e){
           if(e){
