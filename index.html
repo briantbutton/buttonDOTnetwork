@@ -1,693 +1,545 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="ltr" lang="en-US">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B4SW6XJ0KX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-B4SW6XJ0KX');
-</script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="shortcut icon" href="style/images/favicon.ico">
-<title>ButtonNet</title>
-<!-- Bootstrap core CSS -->
-<link href="style/css/bootstrap.css" rel="stylesheet">
-<link href="style/css/settings.css" rel="stylesheet">
-<link href="style/js/google-code-prettify/prettify.css" rel="stylesheet">
-<link href="style/js/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" media="all" />
-<link href="style/js/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.2" rel="stylesheet" type="text/css" />
-<link href="style/css/style.css" rel="stylesheet">
-<link href="style/css/color/aqua.css" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700italic,700,900,900italic,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
-<link href="style/type/fontello.css" rel="stylesheet">
-<link href="style/type/budicons.css" rel="stylesheet">
-<link href="style/css/fonts.css" rel="stylesheet">
-<link href="style/css/buttonnet.css" rel="stylesheet">
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700|Playfair+Display:400,400i,700,700i,900&display=swap" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
+
+	<!-- One Page Module Specific Stylesheet -->
+	<link rel="stylesheet" href="one-page/onepage.css" type="text/css" />
+	<!-- / -->
+
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="one-page/css/et-line.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+
+	<link rel="stylesheet" href="one-page/css/fonts.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Document Title
+	============================================= -->
+	<title>ButtonNet</title>
+
+	<style>
+		.play-icon {
+			position: relative;
+			display: block;
+			font-size: 28px;
+			width: 60px;
+			height: 60px;
+			line-height: 62px;
+			left: 50%;
+			margin-left: -30px;
+			border-radius: 50%;
+			color: #267DF4 !important;
+			background-color: #FFF;
+			-webkit-transition: transform .3s ease;
+			-o-transition: transform .3s ease;
+			transition: transform .3s ease;
+		}
+
+		.play-icon i {
+			position: relative;
+			left: 4px;
+		}
+
+		.play-icon:hover {
+			-webkit-transform: scale(1.15);
+			-ms-transform: scale(1.15);
+			-o-transform: scale(1.15);
+			transform: scale(1.15);
+		}
+
+		body.device-xl .onepage-outdoor-negetive,
+		body.device-lg .onepage-outdoor-negetive { margin-top: -300px; }
+
+		@media (min-width: 768px) {
+			.text-overlay-title h3 {
+				font-size: 22px;
+				letter-spacing: 1px;
+				font-weight: 600;
+			}
+		}
+	</style>
+
 </head>
-<body class="buttonnet">
 
-<div class="body-wrapper">
-  <a name="thetop"></a>
-  <div class="navbar">
-    <div class="navbar-header">
-      <div class="container">
-        <div class="basic-wrapper">
-          <a class="btn responsive-menu pull-right" data-toggle="collapse" data-target=".navbar-collapse"><i class='icon-menu-1'></i></a>
-          <a class="navbar-brand" href="index.html"><img src="style/images/buttonflat-short-lite-wider-gap.png" alt="" data-src="style/images/buttonflat-short-lite-wider-gap.png" data-ret="style/images/buttonflat-short-lite-wider-gap.png" class="retina" /></a>
-        </div>
-        <nav class="collapse navbar-collapse pull-right">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="#thetop">Home</a>
-            </li>
-            <li>
-              <a href="#howitworks">How It Works</a>
-            </li>
-            <li class="dropdown">
-              <a href="index.html#sharing" class="dropdown-toggle js-activated">The User Experience</a>
-              <ul class="dropdown-menu">
-                <li><a href="#sharing">Photo&amp;Video Sharing</a></li>
-                <li><a href="#viewer">On The Big Screen</a></li>
-                <li><a href="#album">Beautiful Albums</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#video">Other Videos</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div>
+<body class="stretched dark">
 
-  <div class="fullscreenbanner-container revolution">
-    <div class="fullscreenbanner">
-      <ul>
-        <li data-transition="fade"> <img src="style/images/slides/share-slide.jpg" alt="" />
-          <div class="caption condensed customin customout" data-x="center" data-y="200" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-						data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-						data-speed="600"
-						data-start="700"
-						data-easing="Back.easeOut"
-						data-endspeed="300"
-						data-endeasing="Power1.easeIn"
-						style="font-family:ProximaSoft-Medium;">Share Photos &amp; Videos</div>
-          <div class="caption slab customin customout" data-x="center" data-y="264" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-						data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-						data-speed="600"
-						data-start="1100"
-						data-easing="Back.easeOut"
-						data-endspeed="300"
-						data-endeasing="Power1.easeIn"
-						style="font-family:ProximaSoft-Medium;">Fast!</div>
-        </li>
-		
-        <li data-transition="fade"> <img src="style/images/slides/album-slide.jpg" alt="" />
-          <div class="caption sfb upper opacity-bg" data-x="center" data-y="250" data-speed="900" data-start="800" data-easing="Sine.easeOut"
-						style="font-family:ProximaSoft-Medium;">Keep Memories</div>
-          <div class="caption sfb lower opacity-bg" data-x="center" data-y="305" data-speed="900" data-start="1300" data-easing="Sine.easeOut"
-						style="font-family:ProximaSoft-Medium;">Make albums</div>
-        </li>
-	  
-	  </ul>
-      <div class="tp-bannertimer tp-bottom"></div>
-    </div>
-  </div>
-  
-  <div class="light-wrapper">
-    <div class="container inner">
-      <div class="text-center">
-        <p class="intro" style="font-family:ProximaSoft-Medium;"> ButtonNet helps you and your guests to share photos and videos.</p>
-        <p class="intro" style="font-family:ProximaSoft-Medium;"> Even <u>without</u> good Internet connectivity.</p>
-      </div>
-    </div>
-    <a name="howitworks"></a>
-  </div>  
-  
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
 
-  <div class="dark-wrapper">
-    <div class="container inner">
-      <div class="divide30"></div>
-      <div class="section-title text-center">
-        <h3>How Does It Work?</h3>
-      </div>    
-      <div class="row">
-        <div class="col-sm-8" id="bn-intro-video-column">
-          <div class="full" style="width: 576px; height: 324px;" id="bn-intro-video-div">
-            <video controls
-                   preload="auto"
-                   id="bn-intro-video"
-                   poster="video/intro-720-title.jpg"
-                   src="video/intro-432.mp4"
-                   width="768"
-                   height="432"
-                   style="width:576px;height:324px;"
-                  >No video</video>
-          </div>
-        </div>
-        <div class="col-sm-4" id="bn-intro-video-opposite">
-          <br />
-          <h4 class="lead" style="font-family:ProximaSoft-Medium;">
-            ButtonNet puts a web server <u>right in the building</u> with you.&nbsp;
-            The result is fast sharing for people under the same roof, no matter where that roof is.
-          </h4>
-          <h4 class="lead" style="font-family:ProximaSoft-Medium;">
-            Content stays in the building, so your backhaul Internet speed is not important.&nbsp;
-            Your guests may share, label and organize videos and pictures, all at &apos;local speed&apos;.
-          </h4>
-          <h4 class="lead" style="font-family:ProximaSoft-Medium;">
-            Local speed is just about instantaneous -- you need to see it to believe it.
-          </h4>
-        </div>
-      </div>
-    </div>
-    <a name="sharing"></a>
-  </div>
+		<!-- Header
+		============================================= -->
+		<header id="header" class="full-header transparent-header dark header-size-custom" data-sticky-shrink="false" data-sticky-offset="full" data-sticky-offset-negative="100">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-between">
 
-  <div class="light-wrapper">
-    <div class="container inner">
-	
-      <div class="divide50"></div>
-	  
-      <div class="section-title text-center">
-        <h3>Photo &amp; Video Sharing</h3>
-      </div>	  
-      <div class="row">
-        <div class="col-sm-4" id="bn-usage-video-opposite">
-          <figure><img src="style/images/slides/share.jpg" alt="" id="usage-opposite-image"/></figure>
-          <h4 class="lead" style="font-family:ProximaSoft-Medium;">ButtonNet helps people to share photos and videos among each other, fast and easy.</h4>
-          <h4 class="lead" style="font-family:ProximaSoft-Medium;">Using its own Wifi networks, ButtonNet works even without good Internet or strong signal.</h4>
-        </div>
-        <div class="col-sm-8" id="bn-usage-video-column">
-          <div class="full" style="width: 576px; height: 324px;" id="bn-usage-video-div">
-            <video controls
-                   preload="auto"
-                   id="bn-usage-video"
-                   poster="video/usage-720-title.jpg"
-                   src="video/usage-432.mp4"
-                   width="768"
-                   height="432"
-                   style="width:576px;height:324px;float:right;"
-                  >No video</video>
-          </div>
-        </div>
-      </div>
-    </div>
-  <a name="viewer"></a>
-  </div>
-   
-  <!-- group viewer /.light-wrapper -->
-  
-  <div class="dark-wrapper">
-    <div class="container inner">
-  
-      <div class="divide50"></div>
-    
-      <div class="section-title text-center">
-        <h3>Group Viewer</h3>
-      </div>    
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="row">
-              <figure><img src="style/images/slides/watch.jpg" alt="" /></figure>
-        <h4 class="lead">You can view photos and videos on a large screen without dragging cables.</h4>
-        <h4 class="lead">You are going to have fun with family and friends.</h4>
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="order-lg-2 col-auto px-0 mr-lg-0">
+							<a href="#thetop" class="standard-logo" data-dark-logo="one-page/images/buttonflat-short-lite-wider-gap-70h.png"><img src="one-page/images/buttonflat-short-lite-wider-gap-70h.png"  alt="ButtonNet Logo"></a>
+							<a href="#thetop" class="retina-logo" data-dark-logo="one-page/images/buttonflat-short-lite-wider-gap-70h.png"><img src="one-page/images/buttonflat-short-lite-wider-gap-70h.png" alt="ButtonNet Logo"></a>
+						</div><!-- #logo end -->
 
-          </div>
-        </div>
-    
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
 
-        <div class="col-sm-8" style="padding-left:50px;">
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu order-lg-1 col-lg-5 px-0" style="position:inherit;">
 
-          <div class="services-1">
-            <div class="row">
-              <div class="col-sm-12">
-          <div class="bm20">
-                  <div class="icon"> <i class="budicon-monitor icn"></i> </div>
-                  <!-- /.icon -->
-                  <div class="text">
-                    <h4>Watch on a large monitor</h4>
-                    <p>Enjoy watching photos and videos on a large external monitor.</p>
-                  </div>
-                  <!-- /.text --> 
-                </div>
-                <!-- /.div -->
-        
-        <div class="bm20">
-                  <div class="icon"> <i class="budicon-mobile icn"></i> </div>
-                  <!-- /.icon -->
-                  <div class="text">
-                    <h4>Remote control by phone</h4>
-                    <p>Navigate photos and videos using your phone.</p>
-                  </div>
-                  <!-- /.text --> 
-                </div>
-                <!-- /.div -->
-        
-<!--        <div class="bm20">
-                  <div class="icon"> <i class="budicon-timer-1 icn"></i> </div>
-                  <div class="text">
-                    <h4>Instant availability</h4>
-                    <p>Viewing will be available as soon as media files are uploaded.</p>
-                  </div>
-                </div> -->
-                <!-- /.div -->
-        
-        <div class="bm20">
-                  <div class="icon"> <i class="budicon-fire icn"></i> </div>
-                  <!-- /.icon -->
-                  <div class="text">
-                    <h4>Rekindle excitements while still hot</h4>
-                    <p>By watching and talking about the fresh experiences, your guests will be reinforced with excitements that you facilitated.</p>
-                  </div>
-                  <!-- /.text --> 
-                </div>
-                <!-- /.div -->
-                
-<!--                 <div class="bm20">
-                  <div class="icon"> <i class="budicon-authors icn"></i> </div>
-                  <div class="text">
-                    <h4>Team Building</h4>
-                    <p>Strong comradery among your guests will improve future activities and your brand loyalty.</p>
-                  </div>
-                </div> -->
-                <!-- /.div -->
-                <div class="bm20">
-                  <div class="icon"> <i class="budicon-cocktail icn"></i> </div>
-                  <!-- /.icon -->
-                  <div class="text">
-                    <h4>Increase revenue</h4>
-                    <p>By encouraging your guests to get together during off-activity hours, you will have more opportunities to increase revenue. </p>
-                  </div>
-                  <!-- /.text --> 
-                </div>
-                <!-- /.div -->
+							<ul class="one-page-menu menu-container" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
+								<li class="menu-item">
+									<a href="#thetop" class="menu-link" data-href="#wrapper"><div>Home</div></a>
+								</li>
+	<!-- 							<li class="menu-item">
+									<a href="#howitworks" class="menu-link" data-href="#section-about"><div>How it works</div></a>
+								</li>
+								<li class="menu-item">
+									<a href="#userexperience" class="menu-link" data-href="#section-userexperience"><div>User Experience</div></a>
+								</li> -->
+							</ul>
 
-                <!-- /.div --> 
-              </div>
-              <!-- /.col-sm-12 --> 
-            </div>
-            <!-- /.row --> 
-          </div>
-          <!-- /.col-services --> 
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- group viewer /.dark-wrapper -->
+						</nav>
 
-  <!-- album maker/.dark-wrapper -->
-  
-  <a name="album"></a>
-  <div class="light-wrapper">
-    <div class="container inner">
-	
-      <div class="divide50"></div>
-	  
-      <div class="section-title text-center">
-        <h3>Album Creator</h3>
-      </div>	  
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="row">
-              <figure><img src="style/images/slides/album.jpg" alt="" /></figure>
-			  <h4 class="lead">ButtonNet helps you to organize media files and make albums very quickly.</h4>
-			  <h4 class="lead">Optionally, you can upload albums to cloud, so people can see the albums after they leave your facility.</h4>
+						<nav class="primary-menu order-lg-3 col-lg-5 px-0" style="position:inherit;">
 
-          </div>
-        </div>
-		
-       <div class="col-sm-8" style="padding-left:50px;">
-          <div class="services-1">
-            <div class="row">
-              <div class="col-sm-12">
-			  
-			    <div class="bm20">
-                  <div class="icon"> <i class="budicon-book-5 icn"></i> </div>
-                  <!-- /.icon -->
-                  <div class="text">
-                    <h4>Rich story-telling features</h4>
-                    <p>Flexible layout and caption capability offer variety of adding story elements.</p>
-					<p>Great to keep memories fresh and great to share your stories with others.</p>
+							<ul class="one-page-menu menu-container justify-content-lg-end" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
+	<!-- 							<li class="menu-item">
+									<a href="#features" class="menu-link" data-href="#section-services"><div>Features</div></a>
+								</li>
+								<li class="menu-item">
+									<a href="#videos" class="menu-link" data-href="#section-videos"><div>Videos</div></a>
+								</li> -->
+								<li class="menu-item">
+									<a href="#pilot" class="menu-link" data-href="#pilot"><div>Pilot Program</div></a>
+								</li>							
+								<li class="menu-item">
+									<a href="#contact" class="menu-link" data-href="#footer"><div>Contact</div></a>
+								</li>
+							</ul>
 
-                  </div>
-                  <!-- /.text --> 				
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Slider
+		============================================= -->
+		<section id="slider" class="slider-element dark swiper_wrapper max-vh-75 max-vh-md-100 max-vh-lg-none include-header" style="height: 900px;" data-effect="fade" data-autoplay="5000" data-loop="true" data-speed="1000" data-progress="true">
+			<a name="thetop"></a>
+			<div class="slider-inner">
+
+				<div class="swiper-container swiper-parent">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide dark">
+							<div class="swiper-slide-bg" style="background-image: url('one-page/images/page/outdoor-5.jpg'); background-position: center bottom;"></div>
+						</div>
+						<div class="swiper-slide dark">
+							<div class="swiper-slide-bg" style="background-image: url('style/images/slides/share-slide.jpg'); background-position: center bottom;"></div>
+						</div>
+						<div class="swiper-slide dark">
+							<div class="swiper-slide-bg" style="background-image: url('one-page/images/page/outdoor-9.jpg'); background-position: center bottom;"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="vertical-middle">
+					<div class="container center" style="font-family: 'Playfair Display';">
+						<h2 id="top-line-text1" class="top-line-text" style="margin-top:500px;" class="font-weight-bold mb-0">Share photos and videos &mdash; <i>Fast!</i></h2>
+						<h2 id="top-line-text2" class="top-line-text">No matter where you are</h2>
+						<a href="video/intro-432.mp4" style="opacity:0;" class="play-icon" data-lightbox="iframe"><i class="icon-googleplay"></i></a>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #slider end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content" style="background-color: #0a0a0c;">
+		    <a name="howitworks"></a>
+			<div class="content-wrap py-0">
+
+				<div id="section-about" class="page-section pt-0">
+					<div class="section m-0">
+						<div class="container clearfix colored-lights-section">
+							<div class="mx-auto center" >
+								<h2 class="faux-quote-body">
+								  "If I want to share content with someone sitting <u>right next to me</u>,
+								  <br>
+								  why must I struggle with an Internet link to a remote web server?"
+								</h2>
+								<h2 class="faux-quote-attribution">&mdash; traveler</h2>
+							</div>
+							<!-- Diagram ============================================= -->
+							<div class="center" style="position:relative;margin-top:12px;">
+								<div id="upsell" class="upsell">
+									<div id="upsell1" style="float:left;position:relative;width:48%;">
+										<div class="overvid-caption">
+											<img id="see-more-intro" src="video/intro-360.jpg" alt="Play" style="cursor:pointer;">
+										</div>
+										<!--
+										<div class="overvid-button">
+											<button id="see-more" class="video-overlay">Play</button>
+										</div>
+									  -->
+									</div>
+									<div id="upsell2" style="float:right;position:relative;width:48%;">
+										<div class="overvid-caption">
+											<img id="see-more-usage" src="video/usage-360.jpg" alt="Play" style="cursor:pointer;">
+										</div>
+									</div>
+								</div>
+								<video muted preload="auto" id="colored-lights" poster="video/colored-lights.jpg" width="70%" >
+							    <source src='video/colored-lights.mp4' type='video/mp4' />
+							  </video>
+								<video style="display:none;" controls id="two-minute-tale" poster="video/colored-lights.jpg" width="70%" >
+							    <source src='video/intro-432.mp4' type='video/mp4' />
+							  </video>
+								<video style="display:none;" controls id="eight-minute-tale" poster="video/colored-lights.jpg" width="70%" >
+							    <source src='video/usage-432.mp4' type='video/mp4' />
+							  </video>
+							</div>
+						</div>
+					</div>
 				</div>
 				
-<!-- 				<div class="bm20">
-                  <div class="icon"> <i class="budicon-book-1 icn"></i> </div>
-                  <div class="text">
-                    <h4>Make photo/video albums with your guests</h4>
-                    <p>Albums will be a great souvenir for your guests to remember great experiences that you facilitated.</p>
-                  </div>
-				</div> -->
+		    <a name="userexperience"></a>					
 				
+				<div id="section-userexperience" class="page-section pt-0">
+				
+					<div class="mx-auto center container">
+						<h2 class=" mb-0  center text-center text-uppercase font-weight-light ls3 font-body" style="padding-bottom:30px; padding-top:40px;">
+							User Experience
+						</h2>
+						<video poster="style/images/slides/share.jpg" controls style=" width: 70%;"> 
+							<source src='video/usage-432.mp4' type='video/mp4' />
+						</video>
+					</div>
+				</div>
+				
+		    <a name="features"></a>
+			
+				<div id="section-blog" class="page-section center">
+					
+					<div id="section-services" class="page-section pt-0">
+
+						<div class="section m-0">
+							<div class="container clearfix">
+								<div class="mx-auto center " style="max-width: 900px;">
+									<h2 class="mb-0 ls1 text-uppercase font-weight-light ls3 font-body" style="padding-bottom:40px;">Album Creator</h2>
+								</div>
+							</div>
+							<div class="row align-items-stretch">
+								<div class="col-lg-4 d-none d-md-block" style="background: url('./style/images/slides/album.jpg') center center no-repeat; background-size: cover;">
+								</div>
+								<div class="col-lg-8">
+									<div class="row align-items-stretch grid-border clearfix">
+										<div class="col-2">
+											<div class="feature-box fbox-center fbox-dark fbox-plain">
+												<div class="fbox-icon">
+													<i class="icon-line2-book-open op-gradient-icon"></i>
+												</div>
+											</div>	
+										</div>
+										<div class="col-10 font-weight-light"  style=" text-align:left;" >											
+											<h4 style="margin-bottom:10px;" >Rich story-telling features</h4>
+											<p style="font-weight:200; font-size:14px;" >Flexible layout and caption capability offer variety of adding story elements.
+											<br>Great to keep memories fresh and great to share your stories with others.</p>
+										</div>
+									</div>
+									
+									<div class="row align-items-stretch grid-border clearfix">
+										<div class="col-2">
+											<div class="feature-box fbox-center fbox-dark fbox-plain">
+												<div class="fbox-icon">
+													<i class="icon-stopwatch1 op-gradient-icon"></i>
+												</div>
+											</div>	
+										</div>
+										<div class="col-10 font-weight-light"  style=" text-align:left;" >											
+											<h4 style="margin-bottom:10px;" >Fast and Easy</h4>
+											<p style="font-weight:200; font-size:14px;" >With ButtonNet Album Creator, you can easily make an album within an hour.</p>
+										</div>
+									</div>
+									
+									<div class="row align-items-stretch grid-border clearfix">
+											<div class="col-2">
+												<div class="feature-box fbox-center fbox-dark fbox-plain">
+													<div class="fbox-icon">
+														<i class="icon-line2-cloud-upload op-gradient-icon"></i>
+													</div>
+												</div>	
+											</div>
+											<div class="col-10 font-weight-light"  style=" text-align:left;" >											
+													<h4 style="margin-bottom:10px;" >Cloud Upload Option</h4>
+													<p style="font-weight:200; font-size:14px;" >Optionally, you can upload the albums so that your guests can see the album even after they leave.</p>
+											</div>
+									</div>	
+									
+									<div class="row align-items-stretch grid-border clearfix">
+										<div class="col-2">
+											<div class="feature-box fbox-center fbox-dark fbox-plain">
+												<div class="fbox-icon">
+													<i class="icon-archive1 op-gradient-icon"></i>
+												</div>
+											</div>	
+										</div>
+										<div class="col-10 font-weight-light"  style=" text-align:left;" >											
+											<h4 style="margin-bottom:10px;" >Online Brochures</h4>
+											<p style="font-weight:200; font-size:14px;" >People are looking forward to making trips and researching their options.<br>
+											ButtonNet allows you to vividly show your amenities, the latest activites and dining options you offer when they arrive.</p>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					
+					
+						<div class=" m-0"  style="padding-top:40px;" >
+							<div class="container clearfix">
+								<div class="mx-auto center " style="max-width: 900px;">
+									<h2 class="mb-0 ls1 text-uppercase font-weight-light ls3 font-body" style="padding-bottom:40px;">
+											HDTV Viewer</h2>
+								</div>
+							</div>
+					
+
+							<div class="row align-items-stretch">
+								<div class="col-lg-4 d-none d-md-block" style="background: url('./style/images/slides/watch.jpg') center center no-repeat; background-size: cover;">
+								</div>
+								<div class="col-lg-8">
+									<div class="row align-items-stretch grid-border clearfix">
+										<div class="col-2">
+											<div class="feature-box fbox-center fbox-dark fbox-plain">
+												<div class="fbox-icon">
+													<i class="icon-tv op-gradient-icon"></i>
+												</div>
+											</div>	
+										</div>
+										<div class="col-10 font-weight-light"  style=" text-align:left;" >											
+											<h4 style="margin-bottom:10px;" >Watch on a large monitor</h4>
+											<p style="font-weight:200; font-size:14px;" >Enjoy watching photos and videos on a large external monitor.</p>
+										</div>
+									</div>
+									
+									<div class="row align-items-stretch grid-border clearfix">
+										<div class="col-2">
+											<div class="feature-box fbox-center fbox-dark fbox-plain">
+												<div class="fbox-icon">
+													<i class="icon-line-smartphone op-gradient-icon"></i>
+												</div>
+											</div>	
+										</div>
+										<div class="col-10 font-weight-light"  style=" text-align:left;" >											
+											<h4 style="margin-bottom:10px;" >Remote control by phone</h4>
+											<p style="font-weight:200; font-size:14px;" >Navigate photos and videos using your phone.</p>
+										</div>
+									</div>
+									
+									<div class="row align-items-stretch grid-border clearfix">
+											<div class="col-2">
+												<div class="feature-box fbox-center fbox-dark fbox-plain">
+													<div class="fbox-icon">
+														<i class="icon-line2-fire op-gradient-icon"></i>
+													</div>
+												</div>	
+											</div>
+											<div class="col-10 font-weight-light"  style=" text-align:left;" >											
+													<h4 style="margin-bottom:10px;" >Rekindle excitements while still hot</h4>
+													<p style="font-weight:200; font-size:14px;" >By watching and talking about the fresh experiences, your guests will be reinforced with excitements that you facilitated.</p>
+											</div>
+									</div>	
+									
+									<div class="row align-items-stretch grid-border clearfix">
+										<div class="col-2">
+											<div class="feature-box fbox-center fbox-dark fbox-plain">
+												<div class="fbox-icon">
+													<i class="icon-cocktail op-gradient-icon"></i>
+												</div>
+											</div>	
+										</div>
+										<div class="col-10 font-weight-light"  style=" text-align:left;" >											
+											<h4 style="margin-bottom:10px;" >Increase revenue</h4>
+											<p style="font-weight:200; font-size:14px;" >By encouraging your guests to get together during off-activity hours, you will have more opportunities to increase revenue. </p>
+										</div>
+									</div>
+						
+								</div>
+
+							</div>
+						</div>
+						
+					</div>
+
+				</div>
+				<div id="section-blog" class="page-section center">
+
+		    <a name="videos"></a>
+					<div id="section-videos" class="section mb-0">
+					
+						<h2 class="text-center text-uppercase font-weight-light ls3 font-body">Videos to lean more</h2>
+						
+					
+						<div class="container clearfix">
+
+							<div class="row posts-md mt-5 col-mb-50 mb-0">
+								<div id="piglets-video0-column" class="entry col-md-4">
+									<div id="piglets-video0-div" class="mt-3 mt-lg-0">
+										<video id="piglets-video0" poster="./one-page/images/upload.png" style="width:100%;transition-property:width,height;transition-duration:0.5s,0.5s;transition-timing-function:linear;">
+											<source src='./video/upload3.mp4' type='video/mp4' />
+										</video>
+										<div class="entry-title nott">
+											<h3 class="font-weight-normal">Easy Upload</h3>
+										</div>
+									</div>
+								</div>
+								<div id="piglets-video1-column" class="entry col-md-4">
+									<div id="piglets-video1-div" class="mt-3 mt-lg-0">
+										<video id="piglets-video1" poster="./one-page/images/share.png" style="width:100%;transition-property:width,height;transition-duration:0.5s,0.5s;transition-timing-function:linear;">
+											<source src='./video/share2.mp4' type='video/mp4' />
+										</video>
+										<div class="entry-title nott">
+											<h3 class="font-weight-normal">Easy Share</h3>
+										</div>
+									</div>
+								</div>								
+								<div id="piglets-video2-column" class="entry col-md-4">
+									<div id="piglets-video2-div" class="mt-3 mt-lg-0">
+										<video id="piglets-video2" poster="./one-page/images/canoncamera.png" style="width:100%;transition-property:width,height;transition-duration:0.5s,0.5s;transition-timing-function:linear;">
+											<source src='./video/canon1d3-67pct-ffmpg23.h264.mp4' type='video/mp4' />
+										</video>
+										<div class="entry-title nott">
+											<h3 class="font-weight-normal">Canon Camera Support</h3>												
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+			</div>
+			
+			
+			
+				<div id="pilot" class="section parallax m-0 dark" style="background-image: url('one-page/images/pilot-background-navy-dolphins.jpg'); padding: 150px 0;" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -300px;">
+
+					<div  class="container clearfix">
+
+						<div class="row justify-content-end">
+							<div class="col-12 center mb-4">
+									<h3>Pilot Program</h3>
+									<p>Do you see an immediate value for ButtonNet features?  You might be interested in our free pilot program.  Here is the deal:</p>
+									<p>We will loan you a ButtonNet server and help you setup.  Then we listen eagerly while you describe your experiences.  The pilot will last for three months but installations that meet certain usage and feedback criteria are eligible to keep it forever.</p>
+									<p>If you live in San Francisco Bay Area and would like to participate, hit that email button below.</p>
+									<a href="mailto:admin@button.network">
+										<button class="button button-border button-circle font-weight-medium ml-0 topmargin-sm"  >Contact us today</button>
+									</a>
+									<br>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		
+		<a name="contact"></a>	
+	
+		<footer id="footer" class="dark border-0">
+
+			<div class="container">
+				<div class="footer-widgets-wrap" style="padding-left:80px; padding-right:80px;">
+
+					<div class="row mx-auto clearfix">
+
+						<div class="col-md-6" style="padding-right:60px;"  >
+
+							<div class="widget clearfix">
+								<h4 class="thick"  >About us</h4>
+								<p>We are a small team of people who want to make something fun and useful.</p>
+								<p>If we can make people smile a little more, we are happy.</p>
+
+							</div>
+
+						</div>
+
+
+						<div class="col-md-6" style="padding-left:80px;"  >
+
+							<div class="widget clearfix">
+								<h4 class="thick" >Contact</h4>
+
+								<p >171 Main Street, Suite 658<br>Los Altos, CA 94022</p>
+								<p >admin@buttonnet.app</p>
+								<p >(650) 680-5265</p>
 								
-				<div class="bm20">
-                  <div class="icon"> <i class="budicon-clock-2 icn"></i> </div>
-                  <!-- /.icon -->
-                  <div class="text">
-                    <h4>Fast and Easy</h4>
-					<p>With ButtonNet Album Creator, you can easily make an album within an hour.</p>
-                  </div>
-                  <!-- /.text --> 				
+							</div>
+
+						</div>
+
+					</div>
+
 				</div>
-                <!-- /.div -->  
-				
-				
-				<div class="bm20">
-                  <div class="icon"> <i class="budicon-support icn"></i> </div>
-                  <!-- /.icon -->
-                  <div class="text">
-                    <h4>Unreliable Internet? No problem!</h4>
-                    <p>Albums can be made even in an environment where there is no Internet. </p>
-					<p>Making an album could be a great chilltime activity if you stay overnight off-grid.</p>
+			</div>
 
-                  </div>
-                  <!-- /.text --> 				
+			<div id="copyrights">
+				<div class="container center clearfix">
+					Copyrights 2021 Button Systems | All Rights Reserved
 				</div>
-				
-			    <div class="bm20">
-                  <div class="icon"> <i class="budicon-book-2 icn"></i> </div>
-                  <!-- /.icon -->
-                  <div class="text">
-                    <h4>Online Brochures</h4>
-                    <p>People are looking forward of making trips and researching their options.</p>
-					<p>ButtonNet allows you to vividly show your amenities, the latest activites and dining options you offer when they arrive.</p>
-                  </div>
-                  <!-- /.text --> 
-                </div>
-                <!-- /.div -->
-			    
-				
-				<div class="bm20">
-                  <div class="icon"> <i class="budicon-cloud-upload icn"></i> </div>
-                  <!-- /.icon -->
-                  <div class="text">
-                    <h4>Cloud upload option</h4>
-                    <p>Optionally, you can upload the albums so that your guests can see the album even after they leave.</p>
-                  </div>
-                  <!-- /.text --> 
-                </div>
-				
-				
-                <!-- /.div -->
-              </div>
-              <!-- /.col-sm-12 --> 
-            </div>
-            <!-- /.row --> 
-          </div>
-          <!-- /.col-services --> 
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- album /.dark-wrapper -->
-  
+			</div>
 
-  
-  
-  <a name="video"></a>
+		</footer><!-- #footer end -->
 
-  <!-- Visual cues for target market -->
-  <div class="dark-wrapper">
-    <div class="container inner">
-      <div class="section-title text-center">
-        <h3>Videos</h3>
-      </div>
-      <div class="row blog-posts">
-        <div class="col-sm-4">
-          <div class="post bordered">
-            <h3 class="post-title text-center"><a href="video1.html">Easy Upload</a></h3>
-            <div class="meta text-center"><span class="date">10.04.2020</span><span class="categories"><a href="#">App</a>, <a href="#">Phone</a></span></div>
-            <figure class="full"><a href="video1.html" >
-              <div class="text-overlay">
-                <div class="info">Watch</div>
-              </div>
-              <img src="./video/easy-upload-iphone11.jpg" alt="" /></a></figure>
-            <div class="post-content">
-              <p>Uploading media files is fast and easy with ButtonNet.</p>
-              <!-- <div class="footer-meta"> <a href="#" class="more pull-left">Continue Reading</a> <span class="like pull-right"><a href="#"><i class="icon-heart-empty-1"></i> 35</a></span> </div> -->
-            </div>
-          </div>
-          <!-- /.post --> 
-        </div>
-        <!-- /col -->
-        <div class="col-sm-4">
-          <div class="post bordered">
-            <h3 class="post-title text-center"><a href="video2.html">Easy Share</a></h3>
-            <div class="meta text-center"><span class="date">11.03.2020</span><span class="categories"><a href="#">App</a>, <a href="#">Phone</a></span></div>
-            <figure class="full"><a href="video2.html">
-              <div class="text-overlay">
-                <div class="info">Watch</div>
-              </div>
-              <img src="./video/share2-iphone.jpg" alt="" /></a></figure>
-            <div class="post-content">
-              <p>Sharing your photos and videos with others is as easy as a finger-slide motion.</p>
-            </div>
-          </div>
-          <!-- /.post --> 
-        </div>
-        <!-- /col -->
-        <div class="col-sm-4">
-          <div class="post bordered">
-            <h3 class="post-title text-center"><a href="ccapi.html">Canon Camera</a></h3>
-            <div class="meta text-center"><span class="date">12.09.2020</span><span class="categories"><a href="#">Canon</a>, <a href="#">CCAPI</a></span></div>
-            <figure class="full"><a href="ccapi.html">
-              <div class="text-overlay">
-                <div class="info">Watch</div>
-              </div>
-              <img src="./video/video-canon1d-snapshot.jpg" alt="" /></a></figure>
-            <div class="post-content">
-              <p>You can view and download photos and videos stored in your Canon cameras from your computers and phones without a cable or a memry reader.</p>
-            </div>
-          </div>
-          <!-- /.post --> 
-        </div>
-        <!-- /col --> 
-      </div>
-      <!-- /.blog-posts -->
-  </div>
-  
-  
-  <a name="pilot"></a> 
-  <div class="parallax testimonials">
-    <div class="container inner text-center">
-      <div class="section-title text-center">
+	</div><!-- #wrapper end -->
 
-        <h3>Pilot Program</h3>
-      </div>
-      <div id="testimonials" class="tab-container">
-        <div class="panel-container">
-            <div class="row">
-              <div class="col-lg-1"></div> 
-              <div class="col-lg-5"> 
-                <p class="prose-text" style="font-family:ProximaSoft-Medium; text-align:left;">
-                  Do you see an immediate value for ButtonNet features?&nbsp;
-                  You might be interested in our free pilot program.&nbsp;
-                  Here is the deal:
-                </p>
-                <p class="prose-text" style="font-family:ProximaSoft-Medium; text-align:left;">
-                  We will loan you a ButtonNet server and help you setup.&nbsp;
-                  Then we listen eagerly while you describe your experiences.&nbsp;
-                  The pilot will last for three months <u>but</u> installations that meet certain usage and feedback criteria are eligible to keep it forever.
-                </p>
-              </div>
-              <div class="col-lg-5">
-                <p class="prose-text" style="font-family:ProximaSoft-Medium; text-align:left;">If you live in San Francisco Bay Area and would like to participate, hit that email button below.</p>
-                <p class="prose-text" style="font-family:ProximaSoft-Semibold;">Contact us today</p>
-                <div class="icon">
-                  <a href="mailto:admin@button.network"><i class="budicon-mail icn" style="font-size:32px;"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-<!--           <div id="tst2"> Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna.<span class="author">Coriss Ambady</span> </div>
-          <div id="tst3"> Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. <span class="author">Barclay Widerski</span> </div>
-          <div id="tst4"> Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor gravida at eget metus.<span class="author">Elsie Spear</span> </div>
-        --> 
-		</div>
-<!--        <ul class="etabs">
-          <li class="tab"><a href="#tst1">1</a></li>
-           <li class="tab"><a href="#tst2">2</a></li>
-          <li class="tab"><a href="#tst3">3</a></li>
-          <li class="tab"><a href="#tst4">4</a></li>
-        </ul> -->
-      </div>
-    </div>
-    <!-- /.container --> 
-  </div>
-  <!-- /.testimonials -->
-  
-    <div class="light-wrapper"><h1></h1></div>
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
 
-  
-  <!-- /.dark-wrapper -->
-  <a name="contact"></a> 
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
 
-  <footer class="footer black-wrapper widget-footer">
-    <div class="container inner">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="widget">
-            <h3 class="widget-title">About Us</h3>
-            <p>We are a small team of people who want to make something fun and useful.</p>
-			<p>If we can make people smile a little more, we are happy.</p>
-          </div>
-          <!-- /.widget --> 
-        </div>
-        <!-- /col -->
-        
-<!--         <div class="col-sm-4">
-          <div class="widget">
-            <h3 class="widget-title">Our Faves</h3>
-            <ul class="post-list">
-              <li>
-                <h6><a href="https://www.leavesandlizards.com/">Leaves and Lizards Retreat</a></h6>
-                <em>Costa Rica</em> </li>
-              <li>
-                <h6><a href="https://scubadivingresource.com/">The Scuba Diving Resource</a></h6>
-                <em>Ocean</em> </li>
-              <li>
-                <h6><a href="blog-post.html">Pellentesque ornare sem lacinia quam</a></h6>
-                <em>15th Aug 2012</em> </li>
-            </ul>
-          </div>
-        </div> -->
-        <!-- /col -->
-        
-        <div class="col-sm-6">
-          <div class="widget">
-            <h3 class="widget-title">Contact us</h3>
-            <p>For product and service inquiries, please contact us.</p>
-            <div class="contact-info"> <i class="icon-location"></i>171 Main St. Suite 658, <br />
-			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los Altos, CA 94022<br />
-              <i class="icon-phone"></i>(650) 680-5265 <br />
-              <i class="icon-mail"></i> <a href="mailto:admin@button.network">admin@button.network</a> </div>
-          </div>
-        </div>
-        <!-- /col -->
-        
-<!--         <div class="col-sm-3">
-          <div class="widget">
-            <h3 class="widget-title">Instagram Feed</h3>
-            <div class="instagram-widget">
-              <ul id="instawidget">
-              </ul>
-            </div>
-          </div> -->
-          <!-- /.widget --> 
-          
-        </div>
-        <!-- /col --> 
-      </div>
-      <!-- /.row --> 
-    </div>
-    <!-- .container -->
-    
-    <div class="sub-footer">
-      <div class="container">
-        <p class="pull-left">© 2021 Button Systems. All rights reserved.</p>
-<!--         <ul class="social pull-right">
-          <li><a href="#"><i class="icon-s-rss"></i></a></li>
-          <li><a href="#"><i class="icon-s-twitter"></i></a></li>
-          <li><a href="#"><i class="icon-s-facebook"></i></a></li>
-          <li><a href="#"><i class="icon-s-dribbble"></i></a></li>
-          <li><a href="#"><i class="icon-s-pinterest"></i></a></li>
-          <li><a href="#"><i class="icon-s-instagram"></i></a></li>
-          <li><a href="#"><i class="icon-s-vimeo"></i></a></li>
-        </ul> -->
-      </div>
-    </div>
-  </footer>
-  <!-- /footer --> 
-  
-</div>
-<!-- /.body-wrapper --> 
-<script src="style/js/jquery.min.js"></script> 
-<script src="style/js/bootstrap.min.js"></script> 
-<script src="style/js/twitter-bootstrap-hover-dropdown.min.js"></script> 
-<script src="style/js/jquery.themepunch.plugins.min.js"></script> 
-<script src="style/js/jquery.themepunch.revolution.min.js"></script> 
-<script src="style/js/jquery.fancybox.pack.js"></script> 
-<script src="style/js/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.2"></script> 
-<script src="style/js/fancybox/helpers/jquery.fancybox-media.js?v=1.0.0"></script> 
-<script src="style/js/jquery.isotope.min.js"></script> 
-<script src="style/js/jquery.easytabs.min.js"></script> 
-<script src="style/js/idangerous.swiper-2.1.min.js"></script> 
-<script src="style/js/jquery.fitvids.js"></script> 
-<script src="style/js/jquery.sticky.js"></script> 
-<script src="style/js/google-code-prettify/prettify.js"></script> 
-<script src="style/js/jquery.slickforms.js"></script> 
-<script src="style/js/instafeed.min.js"></script> 
-<script src="style/js/jquery.dcflickr.1.0.js"></script> 
-<script src="style/js/retina.js"></script> 
-<script src="style/js/classie.js"></script> 
-<script src="style/js/scripts.js"></script>
-<script type="text/javascript">
-    (function (){
-      var introVideo          = document.getElementById("bn-intro-video"),
-          introVideoDiv       = document.getElementById("bn-intro-video-div"),
-          introContainer      = document.getElementById("bn-intro-video-column"),
-          introOpposite       = document.getElementById("bn-intro-video-opposite"),
-          introInitWidth      = 576,
-          introInitHeight     = 324,
-          introPlayWidth      = 768,
-          introPlayHeight     = 432,
-          usageVideo          = document.getElementById("bn-usage-video"),
-          usageVideoDiv       = document.getElementById("bn-usage-video-div"),
-          usageContainer      = document.getElementById("bn-usage-video-column"),
-          usageOpposite       = document.getElementById("bn-usage-video-opposite"),
-          usageInitWidth      = 576,
-          usageInitHeight     = 324,
-          usagePlayWidth      = 768,
-          usagePlayHeight     = 432;
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+	<script src="js/pecial-features.js"></script>
+  <script type="text/javascript">
+    // window.videoPlayer0             = new InView("colored-lights");
+    // window.videoExpander0           = new Rejigger3Columns("piglets",0);
+    // window.videoExpander1           = new Rejigger3Columns("piglets",1);
+    // window.videoExpander1           = new Rejigger3Columns("piglets",2);
+    // window.videobaiter              = new Baiter("colored-lights","two-minute-tale","upsell",["upsell1","upsell2"]);
+  </script>
 
-      if(introVideo&&introVideoDiv&&introContainer&&introOpposite){
-        introVideo.addEventListener("play", expandIntroVideo);
-        introVideo.addEventListener("pause",contractIntroVideo);
-        introVideo.addEventListener("ended",contractIntroVideo)
-      }
-      if(usageVideo&&usageVideoDiv&&usageContainer&&usageOpposite){
-        usageVideo.addEventListener("play", expandUsageVideo);
-        usageVideo.addEventListener("pause",contractUsageVideo);
-        usageVideo.addEventListener("ended",contractUsageVideo)
-      }
-      function expandIntroVideo(){
-        introOpposite.style.opacity         = "0.25";
-        introOpposite.className             = "col-sm-2 contracted";
-        introContainer.className            = "col-sm-10";
-        introVideo.style.width              = ""+introPlayWidth+"px";
-        introVideo.style.height             = ""+introPlayHeight+"px";
-        introVideoDiv.style.width           = ""+introPlayWidth+"px";
-        introVideoDiv.style.height          = ""+introPlayHeight+"px"
-      }
-      function contractIntroVideo(){
-        introVideo.style.width              = ""+introInitWidth+"px";
-        introVideo.style.height             = ""+introInitHeight+"px";
-        setTimeout(contractIntroVideoB,650)
-      }
-      function contractIntroVideoB(){
-        usageVideoDiv.style.width           = ""+introInitWidth+"px";
-        usageVideoDiv.style.height          = ""+introInitHeight+"px"
-        introOpposite.style.opacity         = "0.75";
-        introOpposite.style.fontSize        = "17px";
-        introOpposite.className             = "col-sm-4";
-        introContainer.className            = "col-sm-8"
-      }
-      function expandUsageVideo(){
-        usageOpposite.style.opacity         = "0.25";
-        usageOpposite.className             = "col-sm-2 contracted";
-        usageContainer.className            = "col-sm-10";
-        usageVideo.style.width              = ""+usagePlayWidth+"px";
-        usageVideo.style.height             = ""+usagePlayHeight+"px";
-        usageVideoDiv.style.width           = ""+usagePlayWidth+"px";
-        usageVideoDiv.style.height          = ""+usagePlayHeight+"px"
-      }
-      function contractUsageVideo(){
-        usageVideo.style.width              = ""+usageInitWidth+"px";
-        usageVideo.style.height             = ""+usageInitHeight+"px";
-        setTimeout(contractUsageVideoB,650)
-      }
-      function contractUsageVideoB(){
-        usageVideoDiv.style.width           = ""+usageInitWidth+"px";
-        usageVideoDiv.style.height          = ""+usageInitHeight+"px"
-        usageOpposite.style.opacity         = "0.75";
-        usageOpposite.style.fontSize        = "17px";
-        usageOpposite.className             = "col-sm-4";
-        usageContainer.className            = "col-sm-8"
-      }
-    })();
-</script>
 </body>
 </html>

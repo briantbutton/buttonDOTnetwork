@@ -195,22 +195,30 @@
 							<!-- Diagram ============================================= -->
 							<div class="center" style="position:relative;margin-top:12px;">
 								<div id="upsell" class="upsell">
-									<div id="upsell1" style="float:right;position:relative;width:96%;">
-										<div id="see-more" class="overvid-caption">
-											See full video (2 minutes)
-											<img src="one-page/images/play.png" alt="Play">
+									<div id="upsell1" style="float:left;position:relative;width:48%;">
+										<div class="overvid-caption">
+											<img id="see-more-intro" src="video/intro-360.jpg" alt="Play" style="cursor:pointer;">
 										</div>
+										<!--
 										<div class="overvid-button">
 											<button id="see-more" class="video-overlay">Play</button>
 										</div>
+									  -->
 									</div>
-									<div id="upsell2" style="width:48px;height:30px;float:left;padding:30px;font-size:20px;">&nbsp;</div>
+									<div id="upsell2" style="float:right;position:relative;width:48%;">
+										<div class="overvid-caption">
+											<img id="see-more-usage" src="video/usage-360.jpg" alt="Play" style="cursor:pointer;">
+										</div>
+									</div>
 								</div>
 								<video muted preload="auto" id="colored-lights" poster="video/colored-lights.jpg" width="70%" >
 							    <source src='video/colored-lights.mp4' type='video/mp4' />
 							  </video>
 								<video style="display:none;" controls preload="auto" id="two-minute-tale" poster="video/colored-lights.jpg" width="70%" >
 							    <source src='video/intro-432.mp4' type='video/mp4' />
+							  </video>
+								<video style="display:none;" controls preload="auto" id="eight-minute-tale" poster="video/colored-lights.jpg" width="70%" >
+							    <source src='video/usage-432.mp4' type='video/mp4' />
 							  </video>
 							</div>
 						</div>
@@ -320,7 +328,6 @@
 					
 
 							<div class="row align-items-stretch">
-
 								<div class="col-lg-4 d-none d-md-block" style="background: url('./style/images/slides/watch.jpg') center center no-repeat; background-size: cover;">
 								</div>
 								<div class="col-lg-8">

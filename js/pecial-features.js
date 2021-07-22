@@ -1,9 +1,11 @@
       (function(){
 
         const k                       = [["y","top","Y"],["x","left","X"],["top","top","Y"],["left","left","X"],["bottom","bottom","Y"],["right","right","X"],["height","height"],["width","width"]];
-        var   btn1                    = document.getElementById("see-more"),
+        var   btn1                    = document.getElementById("see-more-intro"),
+              btn2                    = document.getElementById("see-more-usage"),
               vid1                    = document.getElementById("colored-lights"),
               vid2                    = document.getElementById("two-minute-tale"),
+              vid3                    = document.getElementById("eight-minute-tale"),
               upcell                  = document.getElementById("upsell"),
               noUpsell                = false;
 
@@ -157,25 +159,35 @@
         window.videoExpander0         = new Rejigger3Columns("piglets",0);
         window.videoExpander1         = new Rejigger3Columns("piglets",1);
         window.videoExpander1         = new Rejigger3Columns("piglets",2);
-        // videobaiter                 = new Baiter("colored-lights","two-minute-tale","upsell",["upsell1","upsell2"]);
 
-        if(vid1&&vid2&&upcell&&btn1){
-          // vid1.addEventListener("click",switchBait);
-          btn1.addEventListener("click",switchBait);
+        if(vid1&&vid2&&vid3&&upcell&&(btn1||btn2)){
+          if(btn1){btn1.addEventListener("click",switchBait2)}
+          if(btn2){btn2.addEventListener("click",switchBait3)}
           vid1.addEventListener("play",turnOffUpsell);
           vid2.addEventListener("play",turnOffUpsellForever);
+          vid3.addEventListener("play",turnOffUpsellForever);
           vid1.addEventListener("ended",turnOnUpsell);
           vid2.addEventListener("ended",revert);
-          setTimeout((e1=>()=>backToTop(e1))(document.getElementById("top-line-text1")),4000);
-          setTimeout((e2=>()=>backToTop(e2))(document.getElementById("top-line-text2")),8000);
+          vid3.addEventListener("ended",revert);
+          setTimeout((e1=>()=>backToTop(e1))(document.getElementById("top-line-text1")),10000);
+          setTimeout((e2=>()=>backToTop(e2))(document.getElementById("top-line-text2")),14000);
+          setTimeout((v2=>()=>v2.setAttribute("preload","auto"))(vid2),20000);
+          setTimeout((v3=>()=>v3.setAttribute("preload","auto"))(vid3),30000)
         }
-
-        function switchBait(){
+        function switchBait2(){
           vid1.style.display          = "none";
           vid2.style.display          = "inline";
+          vid3.style.display          = "none";
           vid2.play()
         }
+        function switchBait3(){
+          vid1.style.display          = "none";
+          vid2.style.display          = "none";
+          vid3.style.display          = "inline";
+          vid3.play()
+        }
         function revert(){
+          vid3.style.display          = "none";
           vid2.style.display          = "none";
           vid1.style.display          = "inline";
           noUpsell                    = false
