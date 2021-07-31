@@ -3347,7 +3347,8 @@ html[xmlns] .slider-wrap {
 		background-color: #FFF;
 		box-shadow: 0 0 10px rgba(0,0,0,0.1);
 	}
-
+	
+	
 	.sticky-header.full-header #header-wrap {
 		border-bottom: 1px solid #EEE;
 	}
@@ -3355,6 +3356,8 @@ html[xmlns] .slider-wrap {
 	.sticky-header.semi-transparent { background-color: transparent; }
 
 	.semi-transparent.sticky-header #header-wrap { background-color: rgba(255,255,255,0.8) }
+	
+
 
 	/* Primary Menu - Style 3
 	-----------------------------------------------------------------*/
@@ -3671,6 +3674,10 @@ body:not(.top-search-open) .top-search-parent #primary-menu-trigger {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-family: 'Poppins', sans-serif;
+}
+
+.menu-link-dark {
+	color: #DDD;
 }
 
 .menu-link span {
@@ -6482,6 +6489,16 @@ body:not(.has-plugin-html5video) .video-wrap video {
 	color: #777;
 	font-size: 18px;
 }
+
+#pricing-page-title {
+	position: relative;
+	padding: 4rem 0;
+	background-color: #F5F5F5;
+	background-image: url("one-page/images/activities_horseback_riding.jpg");
+	text-align: center;
+	border-bottom: 1px solid #EEE;
+}
+
 
 .breadcrumb {
 	position: absolute !important;
@@ -16956,3 +16973,115 @@ label.checkbox { padding-left: 20px; }
 	animation-name: fadeOutUpSmall;
 }
 
+
+
+/* ----------------------------------------------------------------
+	Yuko's organic button colors
+-----------------------------------------------------------------*/
+
+
+/* Green */
+.btn-organic-green {
+	color: #fff;
+	background-color: #668c4a;
+	border-color: #668c4a;
+}
+
+.btn-organic-green:hover {
+	color: #fff;
+	background-color: #4d6937;
+	border-color: #344626;
+}
+
+.btn-organic-green:focus, .btn-organic-green.focus {
+	color: #fff;
+	background-color: #4d6937;
+	border-color: #344626;
+	box-shadow: 0 0 0 0.2rem rgba(52, 70, 38, 0.5);
+}
+
+.btn-organic-green.disabled, .btn-organic-green:disabled {
+	color: #fff;
+	background-color: #668c4a;
+	border-color: #668c4a;
+}
+
+
+/* Blue */
+.btn-organic-blue {
+	color: #fff;
+	background-color: #0b6c8c;
+	border-color: #0b6c8c;
+}
+
+.btn-organic-blue:hover {
+	color: #fff;
+	background-color: #456980;
+	border-color: #354f60;
+}
+
+.btn-organic-blue:focus, .btn-organic-blue.focus {
+	color: #fff;
+	background-color: #456980;
+	border-color: #354f60;
+	box-shadow: 0 0 0 0.2rem rgba(60, 72, 38, 0.5);
+}
+
+.btn-organic-blue.disabled, .btn-organic-blue:disabled {
+	color: #fff;
+	background-color: #0b6c8c;
+	border-color: #0b6c8c;
+}
+
+/* Purple */
+.btn-organic-purple {
+	color: #fff;
+	background-color: #483976;
+	border-color: #483976;
+}
+
+.btn-organic-purple:hover {
+	color: #fff;
+	background-color: #564870;
+	border-color: #554c64;
+}
+
+.btn-organic-purple:focus, .btn-organic-purple.focus {
+	color: #fff;
+	background-color: #564870;
+	border-color: #554c64;
+	box-shadow: 0 0 0 0.2rem rgba(85, 76, 100, 0.5);
+}
+
+.btn-organic-purple.disabled, .btn-organic-purple:disabled {
+	color: #fff;
+	background-color: #483976;
+	border-color: #483976;
+}
+
+/* Red */
+
+.btn-organic-red {
+	color: #fff;
+	background-color: #ca4443;
+	border-color: #ca4443;
+}
+
+.btn-organic-red:hover {
+	color: #fff;
+	background-color: #a85a4f;
+	border-color: #7e1e1e;
+}
+
+.btn-organic-red:focus, .btn-organic-red.focus {
+	color: #fff;
+	background-color: #a85a4f;
+	border-color: #7e1e1e;
+	box-shadow: 0 0 0 0.2rem rgba(126, 30, 30, 0.5);
+}
+
+.btn-organic-red.disabled, .btn-organic-red:disabled {
+	color: #fff;
+	background-color: #ca4443;
+	border-color: #ca4443;
+}
