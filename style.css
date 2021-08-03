@@ -17085,3 +17085,8 @@ label.checkbox { padding-left: 20px; }
 	background-color: #ca4443;
 	border-color: #ca4443;
 }
+
+
+.text-red {color: #C02942; }
+.text-dirtygreen {color: #1693A5; }
+.text-button-green {color: #59BA41; }
