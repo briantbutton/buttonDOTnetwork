@@ -6,6 +6,8 @@
               vid1                    = document.getElementById("colored-lights"),
               vid2                    = document.getElementById("two-minute-tale"),
               vid3                    = document.getElementById("eight-minute-tale"),
+              evo                     = document.getElementById("exit-video-overlay"),
+              evx                     = document.getElementById("exit-video-x"),
               upcell                  = document.getElementById("upsell"),
               noUpsell                = false;
 
@@ -160,12 +162,15 @@
         window.videoExpander1         = new Rejigger3Columns("piglets",1);
         window.videoExpander1         = new Rejigger3Columns("piglets",2);
 
-        if(vid1&&vid2&&vid3&&upcell&&(btn1||btn2)){
+        if(vid1&&vid2&&vid3&&upcell&&(btn1||btn2)&&evo&&evx){
           if(btn1){btn1.addEventListener("click",switchBait2)}
           if(btn2){btn2.addEventListener("click",switchBait3)}
+          evx.addEventListener("click",revert);
           vid1.addEventListener("play",turnOffUpsell);
           vid2.addEventListener("play",turnOffUpsellForever);
           vid3.addEventListener("play",turnOffUpsellForever);
+          vid2.addEventListener("pause",turnOnOverlay);
+          vid3.addEventListener("pause",turnOnOverlay);
           vid1.addEventListener("ended",turnOnUpsell);
           vid2.addEventListener("ended",revert);
           vid3.addEventListener("ended",revert);
@@ -190,7 +195,7 @@
           vid3.style.display          = "none";
           vid2.style.display          = "none";
           vid1.style.display          = "inline";
-          noUpsell                    = false
+          noUpsell                    = false;
           turnOnUpsell()
         }
         function backToTop(e){
@@ -200,16 +205,24 @@
           }
         }
         function turnOffUpsellForever(){
-          upcell.style.display        = "none";
+          turnOffUpsell();
           noUpsell                    = true
         }
         function turnOffUpsell(){
-          upcell.style.display        = "none"
+          upcell.style.display        = "none";
+          turnOffOverlay()
         }
         function turnOnUpsell(){
           if(!noUpsell){
             upcell.style.display      = "block"
           }
+          turnOffOverlay()
+        }
+        function turnOnOverlay(){
+          evo.style.display           = "block"
+        }
+        function turnOffOverlay(){
+          evo.style.display           = "none"
         }
 
 

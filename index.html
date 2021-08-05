@@ -169,7 +169,7 @@
 					<div class="container center" style="font-family: 'Playfair Display';">
 						<h2 id="top-line-text1" class="top-line-text" style="margin-top:500px;" class="font-weight-bold mb-0">Share photos and videos &mdash; <i>Fast!</i></h2>
 						<h2 id="top-line-text2" class="top-line-text">No matter where you are</h2>
-						<a href="video/intro-432.mp4" style="opacity:0;" class="play-icon" data-lightbox="iframe"><i class="icon-googleplay"></i></a>
+						<!-- <a href="video/intro-432.mp4" style="opacity:0;" class="play-icon" data-lightbox="iframe"><i class="icon-googleplay"></i></a> -->
 					</div>
 				</div>
 
@@ -194,17 +194,12 @@
 								<h2 class="faux-quote-attribution">&mdash; traveler</h2>
 							</div>
 							<!-- Diagram ============================================= -->
-							<div class="center" style="position:relative;margin-top:12px;">
+							<div style="position:relative;margin-top:12px;">
 								<div id="upsell" class="upsell">
 									<div id="upsell1" style="float:left;position:relative;width:48%;">
 										<div class="overvid-caption">
 											<img id="see-more-intro" src="video/intro-360.jpg" alt="Play" style="cursor:pointer;">
 										</div>
-										<!--
-										<div class="overvid-button">
-											<button id="see-more" class="video-overlay">Play</button>
-										</div>
-									  -->
 									</div>
 									<div id="upsell2" style="float:right;position:relative;width:48%;">
 										<div class="overvid-caption">
@@ -212,15 +207,21 @@
 										</div>
 									</div>
 								</div>
-								<video muted preload="auto" id="colored-lights" poster="video/colored-lights.jpg" width="70%" >
-							    <source src='video/colored-lights.mp4' type='video/mp4' />
-							  </video>
-								<video style="display:none;" controls id="two-minute-tale" poster="video/colored-lights.jpg" width="70%" >
-							    <source src='video/intro-432.mp4' type='video/mp4' />
-							  </video>
-								<video style="display:none;" controls id="eight-minute-tale" poster="video/colored-lights.jpg" width="70%" >
-							    <source src='video/usage-432.mp4' type='video/mp4' />
-							  </video>
+								<div style="position:relative;width:70%;margin-left:auto;margin-right:auto;">
+									<video muted preload="auto" id="colored-lights" poster="video/colored-lights.jpg" width="100%" >
+										<source src='video/colored-lights.mp4' type='video/mp4' />
+									</video>
+									<video style="display:none;" controls id="two-minute-tale" poster="video/colored-lights.jpg" width="100%" >
+										<source src='video/intro-432.mp4' type='video/mp4' />
+									</video>
+									<video style="display:none;" controls id="eight-minute-tale" poster="video/colored-lights.jpg" width="100%" ><source src='video/usage-432.mp4' type='video/mp4' />
+									</video>
+									<div id="exit-video-overlay" style="width:100%;height:240px;margin-left:auto;margin-right:auto;position:absolute;top:0px;background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0));display:none;">
+										<img id="exit-video-x" src="video/close-x.svg" alt="Close" style="cursor:pointer;width:56px;height:56px;float:right;padding:8px;">
+									</div>
+									<!-- <div id="exit" class="exit" style="width:100%;height:480px;background:rgba(0,0,0,0.25);margin-left:auto;margin-right:auto;position:absolute;top:0px;">
+									</div> -->
+								</div>
 							</div>
 						</div>
 					</div>
