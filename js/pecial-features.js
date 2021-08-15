@@ -174,10 +174,7 @@
           vid1.addEventListener("ended",turnOnUpsell);
           vid2.addEventListener("ended",revert);
           vid3.addEventListener("ended",revert);
-          setTimeout((e1=>()=>backToTop(e1))(document.getElementById("top-line-text1")),10000);
-          setTimeout((e2=>()=>backToTop(e2))(document.getElementById("top-line-text2")),14000);
-          setTimeout((v2=>()=>v2.setAttribute("preload","auto"))(vid2),20000);
-          setTimeout((v3=>()=>v3.setAttribute("preload","auto"))(vid3),30000)
+          window.addEventListener('load',addPretty)
         }
         function switchBait2(){
           vid1.style.display          = "none";
@@ -240,5 +237,11 @@
             v.middle=Math.floor(0.5+(v.top+v.bottom)/2)
           }
           return v;
+        }
+        function addPretty(event){
+          setTimeout((e1=>()=>backToTop(e1))(document.getElementById("top-line-text1")),1000);
+          setTimeout((e2=>()=>backToTop(e2))(document.getElementById("top-line-text2")),4000);
+          setTimeout((v2=>()=>v2.setAttribute("preload","auto"))(vid2),20000);
+          setTimeout((v3=>()=>v3.setAttribute("preload","auto"))(vid3),30000)
         }
       })()
