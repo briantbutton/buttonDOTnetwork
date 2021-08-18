@@ -17090,3 +17090,6 @@ label.checkbox { padding-left: 20px; }
 .text-red {color: #C02942; }
 .text-dirtygreen {color: #1693A5; }
 .text-button-green {color: #59BA41; }
+
+#video
+{ position:relative; z-index:9997;}
