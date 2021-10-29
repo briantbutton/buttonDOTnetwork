@@ -30,6 +30,21 @@ img#exit-video-x {
 div.overvid-caption > img {
   cursor:                          pointer;
 }
+video.transitional {
+  width:                              100%;
+  transition-property:        width,height;
+  transition-duration:           0.5s,0.5s;
+  transition-timing-function:       linear;
+}
+.contracted div.col-2 {
+  display:                            none;
+}
+.contracted h4 {
+  font-size:               13px !important;
+}
+.contracted p {
+  font-size:               11px !important;
+}
 
 
   .slider-element h2.top-line-text {

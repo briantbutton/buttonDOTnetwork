@@ -93,7 +93,7 @@
 
 						<!-- Logo
 						============================================= -->
-						<div id="logo" class="order-lg-2 col-auto px-0 mr-lg-0">
+						<div id="logo" class="order-md-2 col-auto px-0 mr-md-0">
 							<a href="#thetop" class="standard-logo" data-dark-logo="one-page/images/buttonflat-short-lite-wider-gap-70h.png"><img src="one-page/images/buttonflat-short-lite-wider-gap-70h.png"  alt="ButtonNet Logo"></a>
 							<a href="#thetop" class="retina-logo" data-dark-logo="one-page/images/buttonflat-short-lite-wider-gap-70h.png"><img src="one-page/images/buttonflat-short-lite-wider-gap-70h.png" alt="ButtonNet Logo"></a>
 						</div><!-- #logo end -->
@@ -104,7 +104,7 @@
 
 						<!-- Primary Navigation
 						============================================= -->
-						<nav class="primary-menu order-lg-1 col-lg-5 px-0" style="position:inherit;">
+						<nav class="primary-menu order-md-1 col-md-5 px-0" style="position:inherit;">
 
 							<ul class="one-page-menu menu-container" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
 								<li class="menu-item">
@@ -120,9 +120,9 @@
 
 						</nav>
 
-						<nav class="primary-menu order-lg-3 col-lg-5 px-0" style="position:inherit;">
+						<nav class="primary-menu order-md-3 col-md-5 px-0" style="position:inherit;">
 
-							<ul class="one-page-menu menu-container justify-content-lg-end" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
+							<ul class="one-page-menu menu-container justify-content-md-end" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
 								<li class="menu-item">
 									<a href="#pilot" class="menu-link" data-href="#pilot"><div>Pilot Program</div></a>
 								</li>							
@@ -141,7 +141,7 @@
 
 		<!-- Slider
 		============================================= -->
-		<section id="slider" class="slider-element dark swiper_wrapper max-vh-75 max-vh-md-100 max-vh-lg-none include-header" style="height: 900px;" 
+		<section id="slider" class="slider-element dark swiper_wrapper max-vh-75 max-vh-md-100 max-vh-md-none include-header" style="height: 900px;" 
 			data-effect="fade" 	
 			data-autoplay="4000" data-loop="true" 
 			data-speed="1000" data-progress="true">
@@ -271,10 +271,8 @@
 						<div class="pricing-action">
 
 							<a href="./custom-app.html#" class="button button-circle button-3d button-dirtygreen font-weight-normal border-bottom-0 pulse infinite animated" data-class-xs="" data-class-sm="" data-class-md="button-large" data-class-lg="button-large" data-class-xl="button-large">Learn More</a>
-
 						</div>
 					</div>
-
 				</div>				
 				
 				
@@ -287,19 +285,22 @@
 					<div class="section m-0">
 						<div class="container clearfix">
 							<div class="mx-auto center " style="max-width: 900px;">
-								<h2 class="mb-0 ls1 text-uppercase font-weight-light ls3 font-body" style="padding-bottom:40px;">ButtonNet Albums</h2>
+								<h2 class="mb-0 ls1 text-uppercase font-weight-light ls3 font-body" style="padding-bottom:40px;">
+									ButtonNet Albums
+								</h2>
 							</div>
 						<!-- </div> -->
-							<div class="grid-inner row align-items-center">
+							<div class="row align-items-center">
 
-								<div class="col-lg-6 d-none d-md-block" style="vertical-align:middle;">
-									<video  id="video" poster="./one-page/images/buttonnet-albums-butterfly-525.jpg"  controls  >
-										<source src="./video/album-432.mp4" type="video/mp4" >
-									</video>								
-								
+								<div id="album-video-column" class="col-md-6" style="vertical-align:middle;">
+									<div id="album-video-div">
+										<video  id="album-video" poster="./one-page/images/buttonnet-albums-butterfly-525.jpg" class="transitional">
+											<source src="./video/album-432.mp4" type="video/mp4" />
+										</video>
+									</div>
 								</div>
 
-								<div class="col-lg-6">
+								<div id="album-video-opposite" class="col-md-6">
 									<div class="row align-items-stretch grid-border clearfix">
 										<div class="col-2">
 											<div class="feature-box fbox-center fbox-dark fbox-plain">
@@ -373,9 +374,9 @@
 				
 
 						<div class="row align-items-stretch">
-							<div class="col-lg-6 d-none d-md-block" style="background: url('./style/images/slides/watch.jpg') center center no-repeat; background-size: cover;">
+							<div class="col-md-6 d-none d-md-block" style="background: url('./style/images/slides/watch.jpg') center center no-repeat; background-size: cover;">
 							</div>
-							<div class="col-lg-6">
+							<div class="col-md-6">
 								<div class="row align-items-stretch grid-border clearfix">
 									<div class="col-2">
 										<div class="feature-box fbox-center fbox-dark fbox-plain">
@@ -454,8 +455,8 @@
 
 						<div class="row posts-md mt-5 col-mb-50 mb-0">
 							<div id="piglets-video0-column" class="entry col-md-4">
-								<div id="piglets-video0-div" class="mt-3 mt-lg-0">
-									<video id="piglets-video0" poster="./one-page/images/upload.png" style="width:100%;transition-property:width,height;transition-duration:0.5s,0.5s;transition-timing-function:linear;">
+								<div id="piglets-video0-div" class="mt-3 mt-md-0">
+									<video id="piglets-video0" poster="./one-page/images/upload.png" class="transitional">
 										<source src='./video/upload3.mp4' type='video/mp4' />
 									</video>
 									<div class="entry-title nott">
@@ -464,8 +465,8 @@
 								</div>
 							</div>
 							<div id="piglets-video1-column" class="entry col-md-4">
-								<div id="piglets-video1-div" class="mt-3 mt-lg-0">
-									<video id="piglets-video1" poster="./one-page/images/share.png" style="width:100%;transition-property:width,height;transition-duration:0.5s,0.5s;transition-timing-function:linear;">
+								<div id="piglets-video1-div" class="mt-3 mt-md-0">
+									<video id="piglets-video1" poster="./one-page/images/share.png" class="transitional">
 										<source src='./video/share2.mp4' type='video/mp4' />
 									</video>
 									<div class="entry-title nott">
@@ -474,8 +475,8 @@
 								</div>
 							</div>								
 							<div id="piglets-video2-column" class="entry col-md-4">
-								<div id="piglets-video2-div" class="mt-3 mt-lg-0">
-									<video id="piglets-video2" poster="./one-page/images/canoncamera.png" style="width:100%;transition-property:width,height;transition-duration:0.5s,0.5s;transition-timing-function:linear;">
+								<div id="piglets-video2-div" class="mt-3 mt-md-0">
+									<video id="piglets-video2" poster="./one-page/images/canoncamera.png" class="transitional">
 										<source src='./video/canon1d3-67pct-ffmpg23.h264.mp4' type='video/mp4' />
 									</video>
 									<div class="entry-title nott">
